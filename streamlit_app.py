@@ -10,16 +10,17 @@ import streamlit as st
 """
 
 #adding themning (i hope)
-primaryColor="#F63366"
-SecondaryColor="F0F2F6"
+primaryColor="#7CE1EE"
+SecondaryColor="7CEE80"
 #backgroundColor="#FFFFFF"
 #secondaryBackgroundColor="#F0F2F6"
 #textColor="#262730"
 #font="sans serif"
 
-result = st.button("test", type="primary")
-st.write(result)
-
+button1 = st.button("test", type="primary")
+st.write(button1)
+button2 = st.button("test", type="secondary")
+st.write(button1)
 
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
