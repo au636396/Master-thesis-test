@@ -9,18 +9,9 @@ import streamlit as st
 ## popup
 """
 
-st.button("test")
-st.button('Hit me')
-st.checkbox('Check me out')
-st.radio('Pick one:', ['nose','ear'])
-st.selectbox('Select', [1,2,3])
-st.multiselect('Multiselect', [1,2,3])
-st.slider('Slide me', min_value=0, max_value=10)
-st.select_slider('Slide to select', options=[1,'2'])
-st.text_input('Enter some text')
-st.number_input('Enter a number')
-st.text_area('Area for textual entry')
-st.file_uploader('File uploader')
+result = st.button("test")
+st.write(result)
+
 
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
