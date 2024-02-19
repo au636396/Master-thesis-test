@@ -3,12 +3,14 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+#top text
 """
 # Welcome to my eksperiment!
 
 ## popup
 """
 
+###### makes all the buttons blue
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
@@ -24,7 +26,23 @@ div.stButton > button:hover {
 
 
 
-#adding themning (i hope)
+
+st.markdown("""<style>
+    
+    div:nth-child(7) > [class^="css-"] > div:nth-child(1) > div > div > div > button {
+        background-color: #DD3300;
+        color:#eeffee;
+        border-radius: 0.75rem;
+        }
+
+    div[id^="bui-"] > button:nth-child(1) {
+    background-color: #33DD00;
+    color: #EEFFFF;
+    }
+    </style>""", unsafe_allow_html=True)
+
+
+#adding themning (this should be done in the config file)
 primaryColor="#7CE1EE"
 secondaryColor="7CEE80"
 #backgroundColor="#FFFFFF"
@@ -36,18 +54,18 @@ button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
 
 
-
-m = st.markdown("""
-<style>
-div.stButton > button:first-child {
-    background-color: #7CEE80;
-    color:#ffffff;
-}
-div.stButton > button:hover {
-    background-color: #75DF79;
-    color:#ffffff;
-    }
-</style>""", unsafe_allow_html=True) 
+###### makes all the buttons green
+#m = st.markdown("""
+#<style>
+#div.stButton > button:first-child {
+#    background-color: #7CEE80;
+#    color:#ffffff;
+#}
+#div.stButton > button:hover {
+#    background-color: #75DF79;
+#    color:#ffffff;
+#    }
+#</style>""", unsafe_allow_html=True) 
 
 button2 = st.button("Afvis alle", type="secondary")
 st.write(button2)
