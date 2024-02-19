@@ -32,24 +32,28 @@ secondaryColor="7CEE80"
 #textColor="#262730"
 #font="sans serif"
 
-
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
+
+
 
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color: #7CE1EE;
+    background-color: #7CEE80;
     color:#ffffff;
 }
 div.stButton > button:hover {
-    background-color: #6DCDDA;
+    background-color: #75DF79;
     color:#ffffff;
     }
 </style>""", unsafe_allow_html=True) 
 
 button2 = st.button("Afvis alle", type="secondary")
 st.write(button2)
+
+
+
 
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
