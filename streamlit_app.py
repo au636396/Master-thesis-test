@@ -10,7 +10,6 @@ import streamlit as st
 """
 
 #adding themning (i hope)
-[theme]
 primaryColor="#F63366"
 SecondaryColor="F0F2F6"
 #backgroundColor="#FFFFFF"
