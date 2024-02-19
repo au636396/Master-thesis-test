@@ -8,7 +8,7 @@ import streamlit as st
 
 ## popup
 """
-#test
+
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
@@ -17,11 +17,11 @@ div.stButton > button:first-child {
 }
 div.stButton > button:hover {
     background-color: #6DCDDA;
-    color:#ff0000;
+    color:#ffffff;
     }
 </style>""", unsafe_allow_html=True)
 
-#end of thest
+
 
 
 #adding themning (i hope)
@@ -35,6 +35,19 @@ secondaryColor="7CEE80"
 
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
+
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: #7CE1EE;
+    color:#ffffff;
+}
+div.stButton > button:hover {
+    background-color: #6DCDDA;
+    color:#ffffff;
+    }
+</style>""", unsafe_allow_html=True) 
+
 button2 = st.button("Afvis alle", type="secondary")
 st.write(button2)
 
