@@ -7,39 +7,21 @@ import streamlit as st
 """
 # Welcome to my eksperiment!
 
-## popup
+## Do you want cookies?
 """
 
 ###### makes all the buttons blue
-m = st.markdown("""
-<style>
-div.stButton > button:first-child {
-    background-color: #7CE1EE;
-    color:#ffffff;
-}
-div.stButton > button:hover {
-    background-color: #6DCDDA;
-    color:#ffffff;
-    }
-</style>""", unsafe_allow_html=True)
-
-
-
-
-
-st.markdown("""<style>
-    
-    div:nth-child(7) > [class^="css-"] > div:nth-child(1) > div > div > div > button {
-        background-color: #DD3300;
-        color:#eeffee;
-        border-radius: 0.75rem;
-        }
-
-    div[id^="bui-"] > button:nth-child(1) {
-    background-color: #33DD00;
-    color: #EEFFFF;
-    }
-    </style>""", unsafe_allow_html=True)
+#m = st.markdown("""
+#<style>
+#div.stButton > button:first-child {
+#    background-color: #7CE1EE;
+#    color:#ffffff;
+#}
+#div.stButton > button:hover {
+#    background-color: #6DCDDA;
+#    color:#ffffff;
+#    }
+#</style>""", unsafe_allow_html=True)
 
 
 #adding themning (this should be done in the config file)
@@ -53,20 +35,6 @@ secondaryColor="7CEE80"
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
 
-
-###### makes all the buttons green
-#m = st.markdown("""
-#<style>
-#div.stButton > button:first-child {
-#    background-color: #7CEE80;
-#    color:#ffffff;
-#}
-#div.stButton > button:hover {
-#    background-color: #75DF79;
-#    color:#ffffff;
-#    }
-#</style>""", unsafe_allow_html=True) 
-
 button2 = st.button("Afvis alle", type="secondary")
 st.write(button2)
 
@@ -74,6 +42,9 @@ st.write(button2)
 
 
 
+
+
+###### the old pre-build stuff
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
