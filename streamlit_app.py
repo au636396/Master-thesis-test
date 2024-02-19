@@ -9,7 +9,16 @@ import streamlit as st
 ## popup
 """
 
-result = st.button("test")
+#adding themning (i hope)
+[theme]
+primaryColor="#F63366"
+SecondaryColor="F0F2F6"
+#backgroundColor="#FFFFFF"
+#secondaryBackgroundColor="#F0F2F6"
+#textColor="#262730"
+#font="sans serif"
+
+result = st.button("test", type="primary")
 st.write(result)
 
 
