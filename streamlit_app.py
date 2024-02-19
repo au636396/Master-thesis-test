@@ -12,16 +12,15 @@ import streamlit as st
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color: #0099ff;
+    background-color: #7CE1EE;
     color:#ffffff;
 }
 div.stButton > button:hover {
-    background-color: #00ff00;
+    background-color: #6DCDDA;
     color:#ff0000;
     }
 </style>""", unsafe_allow_html=True)
 
-b = st.button("点我开始运行程序")
 #end of thest
 
 
@@ -34,9 +33,9 @@ secondaryColor="7CEE80"
 #font="sans serif"
 
 
-button1 = st.button("test", type="primary")
+button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
-button2 = st.button("test1", type="secondary")
+button2 = st.button("Afvis alle", type="secondary")
 st.write(button2)
 
 
