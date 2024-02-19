@@ -9,7 +9,7 @@ import streamlit as st
 ## popup
 """
 
-streamlit config show > ~/.streamlit/config.toml
+
 
 #adding themning (i hope)
 primaryColor="#7CE1EE"
