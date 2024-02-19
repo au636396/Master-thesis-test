@@ -9,6 +9,8 @@ import streamlit as st
 ## popup
 """
 
+streamlit config show > ~/.streamlit/config.toml
+
 #adding themning (i hope)
 primaryColor="#7CE1EE"
 secondaryColor="7CEE80"
@@ -17,16 +19,6 @@ secondaryColor="7CEE80"
 #textColor="#262730"
 #font="sans serif"
 
-#test
-animal_shelter = ['cat', 'dog', 'rabbit', 'bird']
-
-animal = st.text_input('Type an animal')
-
-if st.button('Check availability'):
-    have_it = animal.lower() in animal_shelter
-    'We have that animal!' if have_it else 'We don\'t have that animal.'
-
-#end of test
 
 button1 = st.button("test", type="primary")
 st.write(button1)
