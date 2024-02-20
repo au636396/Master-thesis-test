@@ -11,8 +11,8 @@ import streamlit as st
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
-st.write('st.session_state.condition')
-st.write(hello)
+st.write('st.session_state.condition') # this doesnt work and i don't know why- !!! investigate, code from here: https://discuss.streamlit.io/t/randomly-generate-a-number-and-save-this-number-and-user-input/20615/4
+
 
 #top text
 """
