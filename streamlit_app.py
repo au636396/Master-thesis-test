@@ -19,7 +19,7 @@ if "condition" not in st.session_state:
 ## Do you want cookies?
 """
 
-st.write(condition)
+st.write(st.session_state["condition"])
 
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
