@@ -11,8 +11,8 @@ import streamlit as st
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
-st.write(st.session_state.condition)
-st.write("hello")
+st.write('st.session_state.condition')
+st.write(hello)
 
 #top text
 """
