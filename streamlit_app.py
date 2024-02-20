@@ -11,6 +11,7 @@ import streamlit as st
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
+st.write(st.session_state.condition)
 
 #top text
 """
@@ -19,7 +20,6 @@ if "condition" not in st.session_state:
 ## Do you want cookies?
 """
 
-st.write(st.session_state["condition"])
 
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
