@@ -8,10 +8,14 @@ import streamlit as st
 }
 
 # initializing with a random number
-if "rn" not in st.session_state:
-    st.session_state["rn"] = random.randint(1,4)
+if "condition" not in st.session_state:
+    st.session_state["condition"] = random.randint(1,4)
+  
+def change_number():
+    st.session_state["condition"] = random.randint(1,4)
+    return
 
-st.write(st.session_state.rn)
+st.write(st.session_state.condition)
 
 #top text
 """
