@@ -21,8 +21,8 @@ st.write(hello)
 ## Do you want cookies?
 """
 
-st.write('st.session_state.condition')
-st.write(hello)
+st.write(st.session_state.condition)
+st.write("hello")
 
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
