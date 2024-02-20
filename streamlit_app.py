@@ -7,6 +7,11 @@ import streamlit as st
   visibility: hidden;
 }
 
+# initializing with a random number
+if "condition" not in st.session_state:
+    st.session_state["condition"] = random.randint(1,4)
+st.write(condition)
+
 #top text
 """
 # Welcome to my eksperiment!
