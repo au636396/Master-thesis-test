@@ -10,7 +10,7 @@ import streamlit as st
 # initializing with a random number
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
-st.write(condition)
+
 
 #top text
 """
@@ -19,27 +19,7 @@ st.write(condition)
 ## Do you want cookies?
 """
 
-###### makes all the buttons blue
-#m = st.markdown("""
-#<style>
-#div.stButton > button:first-child {
-#    background-color: #7CE1EE;
-#    color:#ffffff;
-#}
-#div.stButton > button:hover {
-#    background-color: #6DCDDA;
-#    color:#ffffff;
-#    }
-#</style>""", unsafe_allow_html=True)
-
-
-#adding themning (this should be done in the config file)
-primaryColor="#7CE1EE"
-secondaryColor="7CEE80"
-#backgroundColor="#FFFFFF"
-#secondaryBackgroundColor="#F0F2F6"
-#textColor="#262730"
-#font="sans serif"
+st.write(condition)
 
 button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
