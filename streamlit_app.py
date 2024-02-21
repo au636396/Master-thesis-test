@@ -43,13 +43,16 @@ else:
 
 with col2:
     accepter1 = st.button("Accepter alle", type="primary")
-    st.write(ac1)
+    st.write(accepter1)
 with col4:
     afvis1 = st.button("  Afvis alle  ", type="secondary")
-    st.write(re1)
+    st.write(afvis1)
 
 
 #trying to track the input of the user 
+df = pd.DataFrame()
+df.to_csv(data)
+
 #df = pd.read_csv(path)
 
 #st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
