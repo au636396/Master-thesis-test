@@ -11,6 +11,10 @@ if "condition" not in st.session_state:
 
 st.write(st.session_state.condition)
 
+if st.session_state.condition = 1 
+    st.write("hello1")
+    else st.write("goodbuy234")
+
 
 #top text
 """
