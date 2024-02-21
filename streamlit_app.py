@@ -52,13 +52,13 @@ with col4:
 df = pd.read_csv("data.csv")
 st.dataframe(df)
 
-df = pd.concat([df, afvis1]
+#df = pd.concat([df, afvis1]
 
-#st.dataframe(df)
+st.dataframe(df)
 #df.append(afvis1)
 
 #st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
-#st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
+st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
 
 
 
