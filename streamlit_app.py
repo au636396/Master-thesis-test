@@ -3,12 +3,12 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-#GithubIcon {
-#visibility: hidden;
-#}
+#removing the github logo at the top of the page
+GithubIcon{
+visibility: hidden;
+}
 
-####### generation a randum number between 1 and 4 for each user secction
-initializing with a random number
+# generation a randum number between 1 and 4 for each user secction
 if "rn" not in st.session_state:
     st.session_state["rn"] = random.randint(1,4)
 
