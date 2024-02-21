@@ -10,8 +10,26 @@ if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 st.write(st.session_state.condition)
 
+# condition number meaning:
+# 1 = Left, same   # the noutral one
+# 2 = Left, diffrent
+# 3 = Right, same
+# 4 = Rigth, diffrent   # the standart one 
 
-# Show different content based on the user's email address.
+#defining the placment of the coloums (used for placing buttons) 
+col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
+
+#top text
+"""
+## Do you want cookies?
+"""
+#insert cookies test:
+"""
+"""
+
+
+
+# Show different content based on the user session number.
 if st.session_state.condition == 1:
     st.write("hello1")
 elif st.session_state.condition == 2:
@@ -23,24 +41,16 @@ elif st.session_state.condition == 4:
 else:
     st.write("An error has occurred, please reload the page!")
 
-
-#top text
-"""
-# Welcome to my eksperiment!
-
-## Do you want cookies?
-"""
-
-col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
-
 with col2:
-    button1 = st.button("Accepter alle", type="primary")
-    st.write(button1)
-
+    accepter1 = st.button("Accepter alle", type="primary")
+    st.write(ac1)
 with col4:
-    button2 = st.button("  Afvis alle  ", type="secondary")
-    st.write(button2)
+    afvis1 = st.button("  Afvis alle  ", type="secondary")
+    st.write(re1)
 
+
+#trying to track the input of the user 
+#df = pd.read_csv(path)
 
 #st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
