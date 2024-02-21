@@ -15,9 +15,9 @@ st.write(st.session_state.condition)
 #    st.write("hello1")
 #    else st.write("goodbuy234")
 
-if st.session_state.condition == 1 :
+if st.session_state.condition == 1:
     st.write("hello1")
-    else :
+    else:
     st.write("goodbuy234")
 
 
