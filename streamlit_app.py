@@ -32,7 +32,7 @@ with col1:
 st.write(button1)
 
 with col2:
-    button2 = st.button("Avfis alle", type="primary")
+    button2 = st.button("TEST alle", type="primary")
 st.write(button2)
 
 
