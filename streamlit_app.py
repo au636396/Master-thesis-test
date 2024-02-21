@@ -51,9 +51,8 @@ with col4:
 
 
 #trying to track the input of the user 
-
-
-#df = pd.read_csv(path)
+df = pd.read_csv(data.csv)
+df.append(afvis1)
 
 #st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
