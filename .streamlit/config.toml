@@ -4,3 +4,10 @@ backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F1F1F1"
 textColor="#262730"
 font="sans serif"
+
+
+
+#removing the github logo at the top of the page
+GithubIcon {
+  visibility: hidden;
+}
