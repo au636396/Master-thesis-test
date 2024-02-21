@@ -4,12 +4,17 @@ import pandas as pd
 import streamlit as st
 
 
-
-# generation a randum number between 1 and 4 for each user secction
+# initializing with a random number
 if "rn" not in st.session_state:
-    st.session_state["rn"] = random.randint(1,4)
+    st.session_state["rn"] = random.randint(1,100)
 
-st.write('st.session_state.rn') 
+# callback function to change the random number stored in state
+#def change_number():
+#    st.session_state["rn"] = random.randint(1,100)
+#    return
+
+st.write(st.session_state.rn)
+
 
 
 #top text
