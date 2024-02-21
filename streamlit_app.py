@@ -4,17 +4,11 @@ import pandas as pd
 import streamlit as st
 import random
 
-# initializing with a random number
-if "rn" not in st.session_state:
-    st.session_state["rn"] = random.randint(1,100)
+# initializing secction with a random number, used for picking a condition
+if "condition" not in st.session_state:
+    st.session_state["condition"] = random.randint(1,4)
 
-# callback function to change the random number stored in state
-#def change_number():
-#    st.session_state["rn"] = random.randint(1,100)
-#    return
-
-st.write(st.session_state.rn)
-
+st.write(st.session_state.condition)
 
 
 #top text
