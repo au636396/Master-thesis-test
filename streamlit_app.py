@@ -41,6 +41,7 @@ elif st.session_state.condition == 4:
 else:
     st.write("An error has occurred, please reload the page!")
 
+#make buttons, this should be con 4, change the col to make them move and change the type to make change colour 
 with col2:
     accepter1 = st.button("Accepter alle", type="primary")
     st.write(accepter1)
@@ -50,8 +51,7 @@ with col4:
 
 
 #trying to track the input of the user 
-df = pd.DataFrame()
-df.to_csv(data)
+
 
 #df = pd.read_csv(path)
 
