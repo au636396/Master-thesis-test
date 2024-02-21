@@ -22,15 +22,15 @@ import streamlit as st
 ## Do you want cookies?
 """
 
-col1, col2 = st.columns(2)
-
-with col1:
-    button1 = st.button("Accepter alle", type="primary")
-st.write(button1)
+col1, col2, col3, col4 = st.columns([2,1,1,2)
 
 with col2:
-    button2 = st.button("TEST alle", type="primary")
-st.write(button2)
+    button1 = st.button("Accepter alle", type="primary")
+    st.write(button1)
+
+with col3:
+    button2 = st.button("Afvis alle", type="secondary")
+    st.write(button2)
 
 
 
