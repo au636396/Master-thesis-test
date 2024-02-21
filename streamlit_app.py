@@ -8,17 +8,24 @@ import random
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
-
 st.write(st.session_state.condition)
+
 
 #if st.session_state.condition == 1 
 #    st.write("hello1")
 #    else st.write("goodbuy234")
 
-if st.session_state.condition == 1:
-    st.write("hello1")
-    else:
-    st.write("goodbuy234")
+#if st.session_state.condition == 1:
+#    st.write("hello1")
+#    else:
+#    st.write("goodbuy234")
+
+
+# Show different content based on the user's email address.
+>>> if st.session_state.condition == 1:
+>>>    st.write("hello1")
+>>> else:
+>>>    st.write("goodbuy234!")
 
 
 #top text
