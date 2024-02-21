@@ -49,10 +49,15 @@ with col4:
 
 
 #trying to track the input of the user 
-df = pd.read_csv("data.csv")
-st.dataframe(df)
+#dfData = pd.read_csv("data.csv")
+#st.dataframe(df)
 
-df = pd.concat([df, afvis1])
+#dfData = pd.concat([dfData, ])   # it cant do boll, soooooooo im trying the dumb ugly inefetions way
+
+
+# Create the pandas DataFrame
+df = pd.DataFrame(columns=['condition', 'button'])
+ 
 
 st.dataframe(df)
 #df.append(afvis1)
