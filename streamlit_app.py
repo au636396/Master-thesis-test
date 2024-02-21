@@ -9,6 +9,7 @@ hide_github_icon = """
   visibility: hidden;
 }
 """
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
