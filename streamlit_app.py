@@ -2,7 +2,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-
+import random
 
 # initializing with a random number
 if "rn" not in st.session_state:
