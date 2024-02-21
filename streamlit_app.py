@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-GithubIcon {
-visibility: hidden;
-}
+#GithubIcon {
+#visibility: hidden;
+#}
 
 ####### this does nothing
 # initializing with a random number
