@@ -4,7 +4,11 @@ import pandas as pd
 import streamlit as st
 import random
 
-MainMenu {visibility: hidden;}
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
