@@ -5,13 +5,13 @@ import streamlit as st
 import random
 
 #----------------------Hide Streamlit footer----------------------------
-hide_st_style = “”"
+hide_st_style = """
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
-“”"
+"""
 st.markdown(hide_st_style, unsafe_allow_html=True)
 #--------------------------------------------------------------------
 # initializing secction with a random number, used for picking a condition
