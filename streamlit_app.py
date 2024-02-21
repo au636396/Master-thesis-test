@@ -7,13 +7,13 @@ import streamlit as st
 #visibility: hidden;
 #}
 
-####### this does nothing
-# initializing with a random number
-#if "rn" not in st.session_state:
-#    st.session_state["rn"] = random.randint(1,100)
+####### generation a randum number between 1 and 4 for each user secction
+initializing with a random number
+if "rn" not in st.session_state:
+    st.session_state["rn"] = random.randint(1,4)
 
-#st.write('st.session_state.rn') # this doesnt work and i don't know why- !!! investigate, code from here: https://discuss.streamlit.io/t/randomly-generate-a-number-and-save-this-number-and-user-input/20615/4
-############
+st.write('st.session_state.rn') 
+
 
 #top text
 """
