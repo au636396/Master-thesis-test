@@ -24,9 +24,6 @@ import streamlit as st
 
 col1, col2 = st.columns(2)
 
-st.write(st.session_state.condition)
-st.write("hello")
-
 with col1:
     button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
@@ -41,7 +38,7 @@ st.write(button2)
 
 
 
-###### the old pre-build stuff
+############################ the old pre-build stuff
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
