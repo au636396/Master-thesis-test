@@ -56,8 +56,8 @@ with col4:
 
 
 # Create the pandas DataFrame
-df = pd.DataFrame(columns=['condition', 'button'])
- 
+df = pd.DataFrame(columns=['condition', 'button'])  # this works to make an empty dataframe
+df.to_csv('data.csv', index=False)  
 
 st.dataframe(df)
 #df.append(afvis1)
