@@ -7,12 +7,13 @@ import streamlit as st
   visibility: hidden;
 }
 
+####### this does nothing
 # initializing with a random number
 if "rn" not in st.session_state:
     st.session_state["rn"] = random.randint(1,100)
 
 st.write('st.session_state.rn') # this doesnt work and i don't know why- !!! investigate, code from here: https://discuss.streamlit.io/t/randomly-generate-a-number-and-save-this-number-and-user-input/20615/4
-
+############
 
 #top text
 """
@@ -21,13 +22,17 @@ st.write('st.session_state.rn') # this doesnt work and i don't know why- !!! inv
 ## Do you want cookies?
 """
 
+col1, col2 = st.beta_columns([1,1])
+
 st.write(st.session_state.condition)
 st.write("hello")
 
-button1 = st.button("Accepter alle", type="primary")
+with col1:
+    button1 = st.button("Accepter alle", type="primary")
 st.write(button1)
 
-button2 = st.button("Afvis alle", type="secondary")
+with col2:
+    button2 = st.button("Avfis alle", type="primary")
 st.write(button2)
 
 
