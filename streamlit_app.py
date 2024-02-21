@@ -11,21 +11,17 @@ if "condition" not in st.session_state:
 st.write(st.session_state.condition)
 
 
-#if st.session_state.condition == 1 
-#    st.write("hello1")
-#    else st.write("goodbuy234")
-
-#if st.session_state.condition == 1:
-#    st.write("hello1")
-#    else:
-#    st.write("goodbuy234")
-
-
 # Show different content based on the user's email address.
 if st.session_state.condition == 1:
     st.write("hello1")
+elif st.session_state.condition == 2:
+    st.write("hello2")
+elif st.session_state.condition == 3:
+    st.write("hello3")
+elif st.session_state.condition == 4:
+    st.write("hello4")
 else:
-    st.write("goodbuy234!")
+    st.write("An error has occurred, please reload the page!")
 
 
 #top text
