@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 #GithubIcon {
-  visibility: hidden;
+visibility: hidden;
 }
 
 ####### this does nothing
