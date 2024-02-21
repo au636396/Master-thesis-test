@@ -27,8 +27,6 @@ col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 """
 """
 
-
-
 # Show different content based on the user session number.
 if st.session_state.condition == 1:
     st.write("hello1")
@@ -51,7 +49,7 @@ with col4:
 
 
 #trying to track the input of the user 
-df = pd.read_csv(data.csv)
+df = pd.read_csv("data.csv")
 df.append(afvis1)
 
 #st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
