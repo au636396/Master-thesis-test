@@ -1,5 +1,3 @@
-#import altair as alt
-#import numpy as np
 import pandas as pd
 import streamlit as st
 import random
@@ -11,10 +9,10 @@ if "condition" not in st.session_state:
 st.write(st.session_state.condition)
 
 # condition number meaning:
-# 1 = Left, same   # the noutral one
+# 1 = Left, same   
 # 2 = Left, diffrent
 # 3 = Right, same
-# 4 = Rigth, diffrent   # the standart one 
+# 4 = Rigth, diffrent  
 
 #defining the placment of the coloums (used for placing buttons) 
 col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
@@ -57,7 +55,7 @@ with col4:
 
 # Create the pandas DataFrame
 df = pd.DataFrame(columns=['condition', 'button'])  # this works to make an empty dataframe
-df.to_csv('data.csv', index=False)  
+df.to_csv('data.csv', index=False)  # i cant seems to save any thing, maybe looke here https://discuss.streamlit.io/t/adding-rows-in-st-data-editor-from-loaded-dataframe/46439
 
 st.dataframe(df)
 #df.append(afvis1)
