@@ -4,8 +4,3 @@ backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F1F1F1"
 textColor="#262730"
 font="sans serif"
-
-
-MainMenu {
-  visibility: hidden;
-}
