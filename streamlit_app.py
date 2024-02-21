@@ -4,6 +4,10 @@ import pandas as pd
 import streamlit as st
 import random
 
+MainMenu {
+  visibility: hidden;
+}
+
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
