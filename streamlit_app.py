@@ -50,6 +50,7 @@ with col4:
 
 #trying to track the input of the user 
 df = pd.read_csv("data.csv")
+pd.concat([df, afvis1]
 st.dataframe(df)
 #df.append(afvis1)
 
