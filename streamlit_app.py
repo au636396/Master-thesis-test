@@ -42,8 +42,8 @@ with col4:
     st.write(button2)
 
 
-st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
-
+#st.write(https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16)
+st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
 
 
 
