@@ -10,7 +10,7 @@ def load_data(sheets_url):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url, index_col=0)
 
-dfgs = load_data(st.secrets["spreadsheet"])
+dfgs = load_data(shttps://docs.google.com/spreadsheets/d/1UQarECGoWYHcDJ9S_Bw7EODRgQQ5JHYdzO-1gS3eJQI/edit#gid=0)
 
 #show results
 st.dataframe(dfgs)
