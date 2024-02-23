@@ -3,10 +3,17 @@ import streamlit as st
 import random
 
 
-
-
 ########### tryong to cornect 
 
+@st.cache_data(ttl=600)
+def load_data(sheets_url):
+    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url, index_col=0)
+
+dfgs = load_data(st.secrets["public_gsheets_url"])
+
+#show results
+st.dataframe(dfgs)
 
 
 
