@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import random
-
+from streamlit_gsheets import GSheetsConnection
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
