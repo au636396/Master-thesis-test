@@ -3,6 +3,21 @@ import streamlit as st
 import random
 #from streamlit_gsheets import GSheetsConnection
 
+from streamlit_gsheets import GSheetsConnection
+
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+df = conn.read()
+
+# Print results.
+for row in df.itertuples():
+    st.write(f"{row.name} has a :{row.pet}:")
+########### tryong to cornect 
+
+
+
+
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
