@@ -3,18 +3,7 @@ import streamlit as st
 import random
 
 
-from shillelagh.backends.apsw.db import connect
 
-if __name__ == "__main__":
-    connection = connect(":memory:")
-    cursor = connection.cursor()
-
-    SQL = """
-    SELECT *
-    FROM "https://docs.google.com/spreadsheets/d/1UQarECGoWYHcDJ9S_Bw7EODRgQQ5JHYdzO-1gS3eJQI/edit?usp=sharing"
-    """
-    for row in cursor.execute(SQL):
-        print(row)
 
 ########### tryong to cornect 
 
