@@ -12,6 +12,15 @@ import random
 #updated = existing.append(your_new_data)
 #gd.set_with_dataframe(ws, updated)
 
+#------------------------ https://docs.gspread.org/en/latest/oauth2.html
+
+import gspread
+
+gc = gspread.service_account()
+
+sh = gc.open("MasterThesisDataLog")
+
+print(sh.sheet1.get('A1'))
 
 #------------- tryong to cornect wiht pandas
 
