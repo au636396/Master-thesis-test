@@ -2,3 +2,4 @@ altair
 pandas
 streamlit
 pygsheets
+gspread_dataframe
