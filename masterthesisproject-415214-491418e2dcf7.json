@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "masterthesisproject-415214",
+  "private_key_id": "491418e2dcf7d447acbc3b2b7798cb3ca4c6befe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZSullzK4YDSpZ\nCdXNlZ5GvkyjAwXDvDWNAMmyYSk2LvASDr+H1j7beK5qyBNuJeOmFiKT8pH2ptoa\nAVqDC2pZqaquH4duujfzcGDQ/U3PH4XxMv6Geoiphao9nrGe4AoAiaTMPwDvhx9/\nR/2R7f6vj6ILNv5UXYCczj7walj5PjUrzz9rlZ/L2T0cuoRRgR0K06TCfl6r861b\nYE84039pi1Z5tVXhZu3okoLRO2yCI2NNn861pktXP47Op4V2Ozss9fXtjZwXRqxV\nnWUX69iFAtDlGvTbxJuCqCqKAUYrTGkB50c5eDgfIWQO5JIqOZV8ZLqbcm0xfQUa\nCmN/h4wvAgMBAAECggEAB94rh1Ea+Kn5X5H4mOITAhK/6aMhYU3+TmW55+iWumyG\nqtC35K5ARmgfQKSP94wNqyTgCaVd3aV6/jgQU/Bk4GxBTt67Y6oAfqMSDl8toxNM\nIUisaKglLKY3XNXTLqKEGjLhsbeSTBoDbPNpXhBVCXxU7L0IBnwAPS1GoCPpptSl\nr7VjL+sIYfHUA4UOOkI1x46qg43WrB6a6cRdR56WWtr3wQ1iv1URlLXMcR2QXdnW\nTciaUb7kdf+3ObnMC8kE0PGNW2Z/YCsDA1017C0WvvEBgS+pJYgiHurylO11LqWn\nbK8j2sclSss1kD4ne0+h++CXuKtGbehUpecwMyRZaQKBgQD8XO3LOA++kxujQQPx\ni10snvbxRsU/HvIK849XSP3ogF20n2FzwQ9Xu3AauAT1pcUBFhrheq2JlF1qdLJR\nCYEOz1L0fBiMVlQZzluV+Ifxqi7SQ9U5515N+iNIMrz7j3/7GiASShd4og+fqxkT\nlVThjfjktNMrpXrSGj937LXcpQKBgQDcbJf/qFVouMWWsTNrCkYGdDqMn2S8hWzB\nivSQX5zY4sdLwx5J1GoLJHaJcVmwbJUrj/291VNao6/YdsJq8wf/fdpsdzDMJhj1\nTmFHea9Ri5AW/X4CBuzCXLZY6jIMPhF3CepRUQJz+paHfx578ToBHl2jfhYhKcFp\nPN7d8ekJQwKBgQDAX36NmVC3L6Cz1A3ThS8jopIP3qjhsw9DNeMg4G1dXO0RkSVS\nferaL/IHDBwLva/tYhJfq4q6A7UqP4bmq14MEhLkd+ymnfBCM8IxEmFe4SIL+tWB\n7FNBEdrvYG4bPYqLuaCVEJHPzYonZuAYw48O2ZDPluAat2xm2Mdk/basWQKBgGqK\nfqmO9sFoVfDxc5XwYEpsUYR44psQrrGZ9X33CPv4GTZweCpdZmg+VqE2TZCt2yg0\nMARaoTB1X+Bz/qLtF1eRwEqfDdIPNA8VtIV0tp3mpF3IZuiZ6kRDxcuSX2B1e8Ga\n5EwrqNDgNXQGqHhl75Bs2fvVTOL4qMiyKFMEw4u7AoGBAJayaYXPKRJlfIQltz1T\nrOn1ESr93V5E2XuAep4NcVqcjy8Ghfe1eGu7IMr2UJnPGhr/XrUYEkx25/r6rweR\ncW/lrSD+ijuzm0N2gk+91l55JHt+xLo/3bBdMsyTK/IDFUpXr9z4g8coiGiEppGi\n0SngieZjY3lURnrciZqRgJFE\n-----END PRIVATE KEY-----\n",
+  "client_email": "master-thesis@masterthesisproject-415214.iam.gserviceaccount.com",
+  "client_id": "105459018472287593302",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/master-thesis%40masterthesisproject-415214.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
