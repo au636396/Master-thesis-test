@@ -3,7 +3,7 @@ import streamlit as st
 import random
 
 #----------------- trying this method -----
-import gspread_dataframe as gd
+#import gspread_dataframe as gd
 
 # Connecting with `gspread` here
 
