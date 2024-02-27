@@ -2,8 +2,18 @@ import pandas as pd
 import streamlit as st
 import random
 
+#----------------- trying this method -----
+import gspread_dataframe as gd
 
-########### tryong to cornect 
+# Connecting with `gspread` here
+
+#ws = gc.open("MasterThesisDataLog").worksheet("Ark1")
+#existing = gd.get_as_dataframe(ws)
+#updated = existing.append(your_new_data)
+#gd.set_with_dataframe(ws, updated)
+
+
+#------------- tryong to cornect wiht pandas
 
 @st.cache_data(ttl=600)
 def load_data(sheets_url):
@@ -14,7 +24,7 @@ dfgs = load_data("https://docs.google.com/spreadsheets/d/1UQarECGoWYHcDJ9S_Bw7EO
 
 #show results
 st.dataframe(dfgs)
-
+#____________
 
 
 # initializing secction with a random number, used for picking a condition
