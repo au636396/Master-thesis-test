@@ -3,3 +3,4 @@ pandas
 streamlit
 pygsheets
 gspread
+gspread_dataframe
