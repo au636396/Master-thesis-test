@@ -20,9 +20,10 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
 
 sh = gc.open("MasterThesisDataLog")
 
-print(sh.sheet1.get('A1'))
+#trying to get it inot a pandas df
+gspd = pd.DataFrame(sh.get_all_records())
 
-st.dataframe(sh) #thsi is not goit to work i dont think
+st.dataframe(gspd) #thsi is not goit to work i dont think
 #----trying to make it appier
 
 #from gspread_dataframe import get_as_dataframe, set_with_dataframe
