@@ -8,9 +8,9 @@ import gspread_dataframe as gd
 
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-df2 = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 #show results
-st.dataframe(df2)
+st.dataframe(pdolddata)
 
 #making a dataframe with no bassis
 #newdata = pd.DataFrame([[1,1.23,'Hello']], columns=list('ABC')) #might be able to be remove the columns part
@@ -18,7 +18,7 @@ st.dataframe(df2)
 
 #making a dataframe wiht appnded old data
 new_row = {'button': '4acc'}
-newdata = df.append(new_row, ignore_index=True)
+newdata = pdolddata.append(new_row, ignore_index=True)
 
 #this should ad the new data to the gsheet
 gd.set_with_dataframe(olddata, newdata)
