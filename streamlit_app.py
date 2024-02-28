@@ -26,10 +26,10 @@ sh = gc.open("MasterThesisDataLog")
 #----trying to make it appier
 
 #from gspread_dataframe import get_as_dataframe, set_with_dataframe
-#import gspread_dataframe as gd
+import gspread_dataframe as gd
 
 #worksheet = sh
-df2 = get_as_dataframe(sh)
+df2 = gd.get_as_dataframe(sh)
 
 #show results
 st.dataframe(df2)
