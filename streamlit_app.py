@@ -21,19 +21,18 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
 sh = gc.open("MasterThesisDataLog")
 
 #trying to get it inot a pandas df
-gspd = pd.DataFrame(sh.get_all_records())
+#gspd = pd.DataFrame(sh.get_all_records())  # object (sh) has no attribute 'get_all_records
 
-st.dataframe(gspd) #thsi is not goit to work i dont think
 #----trying to make it appier
 
 #from gspread_dataframe import get_as_dataframe, set_with_dataframe
 #import gspread_dataframe as gd
 
 #worksheet = sh
-#df2 = get_as_dataframe(worksheet)
+df2 = get_as_dataframe(sh)
 
 #show results
-#st.dataframe(df2)
+st.dataframe(df2)
 
 
 #ws = gc.open("SheetName").worksheet("xyz")
