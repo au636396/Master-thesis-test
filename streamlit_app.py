@@ -13,7 +13,7 @@ df2 = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe
 st.dataframe(df2)
 
 #making a dataframe 
-newdata = pd.DataFrame([["1afv"]])  #might be able to be remove the columns part
+newdata = pd.DataFrame([[1,1.23,'Hello']], columns=list('ABC')) #might be able to be remove the columns part
 st.dataframe(newdata)
 
 #this should ad the new data to the gsheet
