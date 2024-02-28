@@ -16,8 +16,8 @@ st.dataframe(df2)
 newdata = pd.DataFrame([["1afv"]])  #might be able to be remove the columns part
 st.dataframe(newdata)
 
-#this should ad 
-set_with_dataframe(olddata, newdata)
+#this should ad the new data to the gsheet
+gd.set_with_dataframe(olddata, newdata)
 
 #--------------------------------
 
