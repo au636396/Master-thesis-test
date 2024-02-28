@@ -22,12 +22,13 @@ sh = gc.open("MasterThesisDataLog")
 
 print(sh.sheet1.get('A1'))
 
+st.dataframe(sh) #thsi is not goit to work i dont think
 #----trying to make it appier
 
 #from gspread_dataframe import get_as_dataframe, set_with_dataframe
-import gspread_dataframe as gd
+#import gspread_dataframe as gd
 
-worksheet = sh
+#worksheet = sh
 #df2 = get_as_dataframe(worksheet)
 
 #show results
@@ -35,11 +36,11 @@ worksheet = sh
 
 
 #ws = gc.open("SheetName").worksheet("xyz")
-df3 = gd.get_as_dataframe(sh)
+#df3 = gd.get_as_dataframe(sh)
 #updated = existing.append(your_new_data)
 #gd.set_with_dataframe(ws, updated)
 
-st.dataframe(df3)
+#st.dataframe(df3)
 
 
 #------------- tryong to cornect wiht pandas
