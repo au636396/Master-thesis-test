@@ -12,9 +12,13 @@ df2 = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe
 #show results
 st.dataframe(df2)
 
-#making a dataframe 
-newdata = pd.DataFrame([[1,1.23,'Hello']], columns=list('ABC')) #might be able to be remove the columns part
-st.dataframe(newdata)
+#making a dataframe with no bassis
+#newdata = pd.DataFrame([[1,1.23,'Hello']], columns=list('ABC')) #might be able to be remove the columns part
+#st.dataframe(newdata)
+
+#making a dataframe wiht appnded old data
+new_row = {'button': '4acc'}
+newdata = df.append(new_row, ignore_index=True)
 
 #this should ad the new data to the gsheet
 gd.set_with_dataframe(olddata, newdata)
