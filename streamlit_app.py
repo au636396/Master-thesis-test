@@ -7,10 +7,17 @@ import gspread_dataframe as gd
 #------------------------ https://docs.gspread.org/en/latest/oauth2.html---- this doesn’t make errors (YAY)
 
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
-sh = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-df2 = gd.get_as_dataframe(sh)  #imports it as a pd dataframe 
+olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+df2 = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 #show results
 st.dataframe(df2)
+
+#making a dataframe 
+newdata = pd.DataFrame([["1afv"]], columns=list('button'))  #might be able to be remove the columns part
+st.dataframe(newdata)
+
+#this should ad 
+set_with_dataframe(olddata, newdata)
 
 #--------------------------------
 
@@ -25,9 +32,6 @@ st.write(st.session_state.condition)
 # 2 = Left, diffrent
 # 3 = Right, same
 # 4 = Rigth, diffrent  
-
-#defining the placment of the coloums (used for placing buttons) 
-col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 
 #top text
 """
@@ -49,6 +53,8 @@ elif st.session_state.condition == 4:
 else:
     st.write("An error has occurred, please reload the page!")
 
+#defining the placment of the coloums (used for placing buttons) 
+col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 #make buttons, this should be con 4, change the col to make them move and change the type to make change colour 
 with col2:
     accepter1 = st.button("Accepter alle", type="primary")
