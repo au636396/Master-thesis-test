@@ -16,7 +16,7 @@ import random
 
 import gspread
 
-gc = gspread.service_account(filename='.config/gspread/service_account.json')
+gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
 
 sh = gc.open("MasterThesisDataLog")
 
