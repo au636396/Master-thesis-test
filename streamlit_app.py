@@ -4,17 +4,13 @@ import random
 import gspread
 import gspread_dataframe as gd
 
-#------------------------ https://docs.gspread.org/en/latest/oauth2.html---- this doesn’t make errors (YAY)
+#------------------------ Saving the data --------------
 
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
 pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 #show results
 st.dataframe(pdolddata)
-
-#making a dataframe with no bassis
-#newdata = pd.DataFrame([[1,1.23,'Hello']], columns=list('ABC')) #might be able to be remove the columns part
-#st.dataframe(newdata)
 
 #making a dataframe wiht appnded old data
 #new_row = {'button': '4acc'}
