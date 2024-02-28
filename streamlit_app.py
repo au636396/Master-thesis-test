@@ -12,7 +12,7 @@ import random
 #updated = existing.append(your_new_data)
 #gd.set_with_dataframe(ws, updated)
 
-#------------------------ https://docs.gspread.org/en/latest/oauth2.html
+#------------------------ https://docs.gspread.org/en/latest/oauth2.html---- this doesn’t make errors (YAY)
 
 import gspread
 
@@ -21,6 +21,19 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
 sh = gc.open("MasterThesisDataLog")
 
 print(sh.sheet1.get('A1'))
+
+#----trying to make it appier
+
+from gspread_dataframe import get_as_dataframe, set_with_dataframe
+
+worksheet = sh
+df2 = get_as_dataframe(worksheet)
+
+#show results
+st.dataframe(dfgs)
+
+
+
 
 #------------- tryong to cornect wiht pandas
 
