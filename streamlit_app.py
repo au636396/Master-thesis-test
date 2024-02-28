@@ -24,7 +24,8 @@ print(sh.sheet1.get('A1'))
 
 #----trying to make it appier
 
-from gspread_dataframe import get_as_dataframe, set_with_dataframe
+#from gspread_dataframe import get_as_dataframe, set_with_dataframe
+import gspread_dataframe as gd
 
 worksheet = sh
 #df2 = get_as_dataframe(worksheet)
