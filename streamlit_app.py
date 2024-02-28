@@ -18,7 +18,7 @@ import gspread
 
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
 
-sh = gc.open("MasterThesisDataLog")
+sh = gc.open("MasterThesisDataLog").worksheet("Ark1")
 
 #trying to get it inot a pandas df
 #gspd = pd.DataFrame(sh.get_all_records())  # object (sh) has no attribute 'get_all_records
