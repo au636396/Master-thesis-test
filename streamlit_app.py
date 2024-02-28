@@ -20,6 +20,8 @@ st.dataframe(pdolddata)
 #new_row = {'button': '4acc'}
 new_row = pd.DataFrame([['4acc']], columns=['button'])
 newdata = pd.concat([pdolddata, new_row])
+#show results
+st.dataframe(newdata)
 
 #this should ad the new data to the gsheet
 gd.set_with_dataframe(olddata, newdata)
