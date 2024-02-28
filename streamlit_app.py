@@ -27,12 +27,18 @@ print(sh.sheet1.get('A1'))
 from gspread_dataframe import get_as_dataframe, set_with_dataframe
 
 worksheet = sh
-df2 = get_as_dataframe(worksheet)
+#df2 = get_as_dataframe(worksheet)
 
 #show results
-st.dataframe(dfgs)
+#st.dataframe(df2)
 
 
+#ws = gc.open("SheetName").worksheet("xyz")
+df3 = gd.get_as_dataframe(sh)
+#updated = existing.append(your_new_data)
+#gd.set_with_dataframe(ws, updated)
+
+st.dataframe(df3)
 
 
 #------------- tryong to cornect wiht pandas
