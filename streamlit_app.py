@@ -18,7 +18,7 @@ import gspread
 
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
 
-sh = gc.open("MasterThesisDataLog").worksheet("Ark1") # gspread.exceptions.APIError: {'code': 400, 'message': "Range ('Ark1'!ARK1) exceeds grid limits. Max rows: 1000, max columns: 26", 'status': 'INVALID_ARGUMENT'}
+sh = gc.open("MasterThesisDataLog").worksheet("ark") # gspread.exceptions.APIError: {'code': 400, 'message': "Range ('Ark1'!ARK1) exceeds grid limits. Max rows: 1000, max columns: 26", 'status': 'INVALID_ARGUMENT'}
 
 #trying to get it inot a pandas df
 #gspd = pd.DataFrame(sh.get_all_records())  # object (sh) has no attribute 'get_all_records
