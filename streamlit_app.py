@@ -1,60 +1,18 @@
 import pandas as pd
 import streamlit as st
 import random
-
-#----------------- trying this method -----
-#import gspread_dataframe as gd
-
-# Connecting with `gspread` here
-
-#ws = gc.open("MasterThesisDataLog").worksheet("Ark1")
-#existing = gd.get_as_dataframe(ws)
-#updated = existing.append(your_new_data)
-#gd.set_with_dataframe(ws, updated)
+import gspread
+import gspread_dataframe as gd
 
 #------------------------ https://docs.gspread.org/en/latest/oauth2.html---- this doesn’t make errors (YAY)
 
-import gspread
-
-gc = gspread.service_account(filename='~/.config/gspread/service_account.json')
-
-sh = gc.open("MasterThesisDataLog").worksheet("ark") # gspread.exceptions.APIError: {'code': 400, 'message': "Range ('Ark1'!ARK1) exceeds grid limits. Max rows: 1000, max columns: 26", 'status': 'INVALID_ARGUMENT'}
-
-#trying to get it inot a pandas df
-#gspd = pd.DataFrame(sh.get_all_records())  # object (sh) has no attribute 'get_all_records
-
-#----trying to make it appier
-
-#from gspread_dataframe import get_as_dataframe, set_with_dataframe
-import gspread_dataframe as gd
-
-#worksheet = sh
-df2 = gd.get_as_dataframe(sh)
-
+gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
+sh = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+df2 = gd.get_as_dataframe(sh)  #imports it as a pd dataframe 
 #show results
 st.dataframe(df2)
 
-
-#ws = gc.open("SheetName").worksheet("xyz")
-#df3 = gd.get_as_dataframe(sh)
-#updated = existing.append(your_new_data)
-#gd.set_with_dataframe(ws, updated)
-
-#st.dataframe(df3)
-
-
-#------------- tryong to cornect wiht pandas
-
-@st.cache_data(ttl=600)
-def load_data(sheets_url):
-    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-    return pd.read_csv(csv_url, index_col=0)
-
-dfgs = load_data("https://docs.google.com/spreadsheets/d/1UQarECGoWYHcDJ9S_Bw7EODRgQQ5JHYdzO-1gS3eJQI/edit#gid=0")
-
-#show results
-st.dataframe(dfgs)
-#____________
+#--------------------------------
 
 
 # initializing secction with a random number, used for picking a condition
