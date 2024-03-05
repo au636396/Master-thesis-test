@@ -71,7 +71,7 @@ else:
     st.write("An error has occurred, please reload the page!")
     
 ## take the 
-new_row = pd.DataFrame([[click]], columns=['button']) 
+new_row = pd.DataFrame([['click']], columns=['button']) 
 st.dataframe(new_row)
 #show button with link to surevery
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
