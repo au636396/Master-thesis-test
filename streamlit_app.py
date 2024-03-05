@@ -3,6 +3,7 @@ import streamlit as st
 import random
 import gspread
 import gspread_dataframe as gd
+import base64
 
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
@@ -18,9 +19,7 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 #--------------------------------
 
-# trying a function that adda a bacgournd picture 
-import base64
-
+# function that add a bacgournd picture 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
