@@ -5,24 +5,19 @@ import gspread
 import gspread_dataframe as gd
 
 #------------------------ Saving the data --------------
-
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
-olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
-#show results
-st.dataframe(pdolddata)
 
-#making a dataframe wiht appnded old data
-#new_row = {'button': '4acc'}
-new_row = pd.DataFrame([['4acc']], columns=['button'])
-newdata = pd.concat([pdolddata, new_row])
-#show results
-st.dataframe(newdata)
+#-------------------------- this should be added after the button press code wiht "4acc" being changes to a value set by the buttons (i think)
+#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+###making a dataframe wiht appnded old data
+#new_row = pd.DataFrame([['4acc']], columns=['button']) #Adding 4acc (condition 4 accsept button) to the coulum named button
+#newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 
-#this should ad the new data to the gsheet
-gd.set_with_dataframe(olddata, newdata)
+#gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
 #--------------------------------
+
 
 
 # initializing secction with a random number, used for picking a condition
@@ -30,11 +25,9 @@ if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 st.write(st.session_state.condition)
 
-# condition number meaning:
-# 1 = Left, same   
-# 2 = Left, diffrent
-# 3 = Right, same
-# 4 = Rigth, diffrent  
+
+
+ 
 
 #top text
 """
