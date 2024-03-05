@@ -42,10 +42,10 @@ col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 if st.session_state.condition == 1:  # con 1
     with col2:
         if st.button("Accepter alle", type="primary"):
-            click = accepter1
+            click = "accepter1"
     with col4:
         if st.button("  Afvis alle  ", type="primary"):
-            click = afvis1
+            click = "afvis1"
 elif st.session_state.condition == 2:  # con 2
     with col2:
         if st.button("Accepter alle", type="primary"):
