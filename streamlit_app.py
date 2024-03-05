@@ -36,6 +36,7 @@ st.write(st.session_state.condition)
 #insert cookies test:
 """
 """
+st.image('basic_cookie.png')
 
 # Show different content based on the user session number.
 if st.session_state.condition == 1:
