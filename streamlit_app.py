@@ -59,21 +59,18 @@ if st.session_state.condition == 1:
 with col4:
         afvis1 = st.button("  Afvis alle  ", type="primary")
         st.write("hello1")
-    
 elif st.session_state.condition == 2:
     with col2:
         accepter1 = st.button("Accepter alle", type="primary")
 with col4:
         afvis1 = st.button("  Afvis alle  ", type="secondary")
         st.write("hello2")
-    
 elif st.session_state.condition == 3:
     with col4:
         accepter1 = st.button("Accepter alle", type="primary")
 with col2:
         afvis1 = st.button("  Afvis alle  ", type="primary")
         st.write("hello3")
-
 elif st.session_state.condition == 4:
     with col4:
         accepter1 = st.button("Accepter alle", type="primary")
