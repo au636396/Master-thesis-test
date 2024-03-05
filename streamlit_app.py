@@ -41,8 +41,8 @@ col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 # Show different content based on the user session number.
 if st.session_state.condition == 1:  # con 1
     with col2:
-        accepter1 = st.button("Accepter alle", type="primary"):
-        click = accepter1
+        if st.button("Accepter alle", type="primary"):
+            click = accepter1
     with col4:
         afvis1 = st.button("  Afvis alle  ", type="primary")
         st.write("hello1")
