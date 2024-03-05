@@ -71,7 +71,8 @@ else:
     st.write("An error has occurred, please reload the page!")
     
 ## take the 
-new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
+if "click" is in st.session_state:
+    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
 st.dataframe(new_row)
 #show button with link to surevery
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
