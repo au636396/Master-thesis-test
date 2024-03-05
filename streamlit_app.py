@@ -19,6 +19,12 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 #--------------------------------
 
 # trying a function that adda a bacgournd picture 
+import base64
+
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 def set_background(png_file):
     bin_str = get_base64(png_file)
     page_bg_img = '''
