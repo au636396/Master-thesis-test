@@ -25,7 +25,7 @@ if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 st.write(st.session_state.condition)
 
-col1, col2, col3 = st.columns([1,1,1])
+col1, col2, col3 = st.columns([1,4,1])
 with col2: st.image('basic_cookie.png')
 
 
