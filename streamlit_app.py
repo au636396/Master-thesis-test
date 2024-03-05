@@ -49,7 +49,7 @@ col1, col2, col3 = st.columns([1,4,1])
 with col2: st.image('basic_cookie.png')
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
-col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
+col1, col2, col4, col5 = st.columns([3,2,2,3])
 
 ### condition number meaning:
 # 1 = Left, same   
