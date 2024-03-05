@@ -3,3 +3,4 @@ pandas
 streamlit
 gspread
 gspread_dataframe
+streamlit_antd_components
