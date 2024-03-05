@@ -25,7 +25,7 @@ import streamlit_antd_components as sac
 sac.buttons([
     sac.ButtonsItem(label='button'),
     sac.ButtonsItem(label='google', color='#F1F1F1'),
-], label='label', align='center', gap='xl', color='green')
+], label='label', align='center', gap='xxxxl', color='green')
 
 
 # function that add a bacgournd picture 
