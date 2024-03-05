@@ -43,23 +43,42 @@ st.image('basic_cookie.png')
 #defining the placment of the coloums (used for placing buttons) 
 col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 #make buttons, this should be con 4, change the col to make them move and change the type to make change colour 
-with col2:
-    accepter1 = st.button("Accepter alle", type="primary")
-    st.write(accepter1)
-with col4:
-    afvis1 = st.button("  Afvis alle  ", type="secondary")
-    st.write(afvis1)
 
+    
+### condition number meaning:
+# 1 = Left, same   
+# 2 = Left, diffrent
+# 3 = Right, same
+# 4 = Rigth, diffrent 
 
 
 # Show different content based on the user session number.
 if st.session_state.condition == 1:
+    with col2:
+    accepter1 = st.button("Accepter alle", type="primary")
+with col4:
+    afvis1 = st.button("  Afvis alle  ", type="primary")
     st.write("hello1")
+    
 elif st.session_state.condition == 2:
+    with col2:
+    accepter1 = st.button("Accepter alle", type="primary")
+with col4:
+    afvis1 = st.button("  Afvis alle  ", type="secondary")
     st.write("hello2")
+    
 elif st.session_state.condition == 3:
+    with col4:
+    accepter1 = st.button("Accepter alle", type="primary")
+with col2:
+    afvis1 = st.button("  Afvis alle  ", type="primary")
     st.write("hello3")
+
 elif st.session_state.condition == 4:
+    with col4:
+    accepter1 = st.button("Accepter alle", type="primary")
+with col2:
+    afvis1 = st.button("  Afvis alle  ", type="secondary")
     st.write("hello4")
 else:
     st.write("An error has occurred, please reload the page!")
