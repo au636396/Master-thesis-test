@@ -44,28 +44,35 @@ if st.session_state.condition == 1:  # con 1
         if st.button("Accepter alle", type="primary"):
             click = accepter1
     with col4:
-        afvis1 = st.button("  Afvis alle  ", type="primary")
+        if st.button("  Afvis alle  ", type="primary"):
+            click = afvis1
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        accepter2 = st.button("Accepter alle", type="primary")
+        if st.button("Accepter alle", type="primary"):
+            click = accepter2
     with col4:
-        afvis2 = st.button("  Afvis alle  ", type="secondary")
+        if st.button("  Afvis alle  ", type="secondary"):
+            click = afvis2
 elif st.session_state.condition == 3:  # con 3
     with col4:
-        accepter3 = st.button("Accepter alle", type="primary")
+        if st.button("Accepter alle", type="primary"):
+            click = accepter3
     with col2:
-        afvis3 = st.button("  Afvis alle  ", type="primary")
+        if st.button("  Afvis alle  ", type="primary"):
+            click = afvis3
 elif st.session_state.condition == 4:  # con 4
     with col4:
-        accepter4 = st.button("Accepter alle", type="primary")
+        if st.button("Accepter alle", type="primary"):
+            click = accepter4
     with col2:
-        afvis4 = st.button("  Afvis alle  ", type="secondary")
+        if st.button("  Afvis alle  ", type="secondary"):
+            click = afvis4
 else:
     st.write("An error has occurred, please reload the page!")
     
 ## take the 
- #new_row = pd.DataFrame([['4acc']], columns=['button']) 
-
+new_row = pd.DataFrame([[click]], columns=['button']) 
+st.dataframe(new_row)
 #show button with link to surevery
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
 
