@@ -21,10 +21,11 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 
 import streamlit_antd_components as sac
-#sac.buttons([
-sac.ButtonsItem(label='button')
-sac.ButtonsItem(label='google', color='#25C3B0')
-#], label='label', align='center', gap='xl', color='green')
+
+sac.buttons([
+    sac.ButtonsItem(label='button')
+    sac.ButtonsItem(label='google', color='#F1F1F1'),
+], label='label', align='center', gap='xl', color='green')
 
 # function that add a bacgournd picture 
 def get_base64(bin_file):
