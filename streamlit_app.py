@@ -18,7 +18,20 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 #--------------------------------
 
-
+# trying a function that adda a bacgournd picture 
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    
+set_background('generic_website.png')
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
@@ -78,7 +91,7 @@ new_row = pd.DataFrame([[st.session_state.click]], columns=['button'])
 st.dataframe(new_row)   #!!! remove this before experiment launch
 
 
-#show button with link to surevery
+#show button with link to surevery only after a button has been cliked 
 if st.session_state.click != 'button not cliked':
     st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
 
