@@ -49,24 +49,24 @@ if st.session_state.condition == 1:  # con 1
 elif st.session_state.condition == 2:  # con 2
     with col2:
         if st.button("Accepter alle", type="primary"):
-            click = accepter2
+            click = "accepter2"
     with col4:
         if st.button("  Afvis alle  ", type="secondary"):
-            click = afvis2
+            click = "afvis2"
 elif st.session_state.condition == 3:  # con 3
     with col4:
         if st.button("Accepter alle", type="primary"):
-            click = accepter3
+            click = "accepter3"
     with col2:
         if st.button("  Afvis alle  ", type="primary"):
-            click = afvis3
+            click = "afvis3"
 elif st.session_state.condition == 4:  # con 4
     with col4:
         if st.button("Accepter alle", type="primary"):
-            click = accepter4
+            click = "accepter4"
     with col2:
         if st.button("  Afvis alle  ", type="secondary"):
-            click = afvis4
+            click = "afvis4"
 else:
     st.write("An error has occurred, please reload the page!")
     
