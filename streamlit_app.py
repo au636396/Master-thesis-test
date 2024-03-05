@@ -74,8 +74,7 @@ else:
 if 'click' not in st.session_state:
     st.session_state['click'] = 'button not cliked'
 ## take the button input and puts it in the new row dataframe
-if "click" is in st.session_state:
-    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
+new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
 st.dataframe(new_row)
 #show button with link to surevery
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
