@@ -23,18 +23,14 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
-st.write(st.session_state.condition)
 
+# making the cookie banner apir
 col1, col2, col3 = st.columns([1,4,1])
 with col2: st.image('basic_cookie.png')
 
-
-
-#defining the placment of the coloums (used for placing buttons) 
+#defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
 col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
-#make buttons, this should be con 4, change the col to make them move and change the type to make change colour 
 
-    
 ### condition number meaning:
 # 1 = Left, same   
 # 2 = Left, diffrent
@@ -43,29 +39,29 @@ col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 
 
 # Show different content based on the user session number.
-if st.session_state.condition == 1:
+if st.session_state.condition == 1:  # con 1
     with col2:
         accepter1 = st.button("Accepter alle", type="primary")
     with col4:
         afvis1 = st.button("  Afvis alle  ", type="primary")
         st.write("hello1")
-elif st.session_state.condition == 2:
+elif st.session_state.condition == 2:  # con 2
     with col2:
-        accepter1 = st.button("Accepter alle", type="primary")
+        accepter2 = st.button("Accepter alle", type="primary")
     with col4:
-        afvis1 = st.button("  Afvis alle  ", type="secondary")
+        afvis2 = st.button("  Afvis alle  ", type="secondary")
         st.write("hello2")
-elif st.session_state.condition == 3:
+elif st.session_state.condition == 3:  # con 3
     with col4:
-        accepter1 = st.button("Accepter alle", type="primary")
+        accepter3 = st.button("Accepter alle", type="primary")
     with col2:
-        afvis1 = st.button("  Afvis alle  ", type="primary")
+        afvis3 = st.button("  Afvis alle  ", type="primary")
         st.write("hello3")
-elif st.session_state.condition == 4:
+elif st.session_state.condition == 4:  # con 4
     with col4:
-        accepter1 = st.button("Accepter alle", type="primary")
+        accepter4 = st.button("Accepter alle", type="primary")
     with col2:
-        afvis1 = st.button("  Afvis alle  ", type="secondary")
+        afvis4 = st.button("  Afvis alle  ", type="secondary")
         st.write("hello4")
 else:
     st.write("An error has occurred, please reload the page!")
