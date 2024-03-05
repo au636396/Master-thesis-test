@@ -41,7 +41,8 @@ col1, col2, col3, col4, col5 = st.columns([3,2,1,2,3])
 # Show different content based on the user session number.
 if st.session_state.condition == 1:  # con 1
     with col2:
-        accepter1 = st.button("Accepter alle", type="primary")
+        accepter1 = st.button("Accepter alle", type="primary"):
+        click = accepter1
     with col4:
         afvis1 = st.button("  Afvis alle  ", type="primary")
         st.write("hello1")
@@ -65,6 +66,9 @@ elif st.session_state.condition == 4:  # con 4
         st.write("hello4")
 else:
     st.write("An error has occurred, please reload the page!")
+    
+## take the 
+ #new_row = pd.DataFrame([['4acc']], columns=['button']) 
 
 #show button with link to surevery
 st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
