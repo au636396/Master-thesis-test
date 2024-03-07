@@ -21,7 +21,7 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 
 import streamlit_antd_components as sac
-import st-btn-group
+from st_btn_group import st_btn_group
 
 buttons = [
     {
