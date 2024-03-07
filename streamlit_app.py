@@ -26,7 +26,7 @@ from st_btn_group import st_btn_group
 buttons = [
     {
         "label": "Accepter alle",
-        "style": {"backgroundColor": "7CEE80", "color": "black"},
+        "style": {"backgroundColor": "lightgreen", "color": "black"},
     },
     {
         "label": " Afvis alle ",
