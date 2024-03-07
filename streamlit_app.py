@@ -20,13 +20,8 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 #--------------------------------
 
 
-#import streamlit_antd_components as sac not in use
 from st_btn_group import st_btn_group
 
-
-
-x = st.slider('x')  # 👈 this is a widget
-st.write(x, 'squared is', x * x)
 
 
 # function that add a bacgournd picture 
@@ -65,10 +60,12 @@ buttons = [
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
-# making the cookie banner apir
 col1, col2, col3 = st.columns([1,4,1])
-with col2: st.image('basic_cookie.png')
-with col2: st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
+# making the cookie banner apir
+with st.container(height=300):
+    st.markdown(long_text)
+    with col2: st.image('basic_cookie.png')
+    with col2: st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
