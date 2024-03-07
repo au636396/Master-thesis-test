@@ -60,8 +60,6 @@ buttons = [
 ]
 
 
-st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
-
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
@@ -69,6 +67,8 @@ if "condition" not in st.session_state:
 # making the cookie banner apir
 col1, col2, col3 = st.columns([1,4,1])
 with col2: st.image('basic_cookie.png')
+wiht col2: st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
+
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
 col1, col2, col4, col5 = st.columns([3,2,2,3])
