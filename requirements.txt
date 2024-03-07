@@ -4,3 +4,4 @@ streamlit
 gspread
 gspread_dataframe
 streamlit_antd_components
+st-btn-group==0.0.11
