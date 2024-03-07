@@ -33,7 +33,7 @@ buttons = [
     },
 ]
 
-st_btn_group(buttons=buttons, key="5", gap_between_buttons = 54)
+st_btn_group(buttons=buttons, key="5", gap_between_buttons = 54, size='default', align ='center')
 
 
 sac.buttons([
