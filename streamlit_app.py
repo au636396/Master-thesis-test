@@ -25,7 +25,8 @@ from st_btn_group import st_btn_group
 
 
 
-
+x = st.slider('x')  # 👈 this is a widget
+st.write(x, 'squared is', x * x)
 
 
 # function that add a bacgournd picture 
