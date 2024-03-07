@@ -1,7 +1,6 @@
 altair
 pandas
-streamlit
-gspread
-gspread_dataframe
-streamlit_antd_components
+streamlit==1.31.1
+gspread==6.0.2
+gspread_dataframe==3.3.1
 st-btn-group==0.0.11
