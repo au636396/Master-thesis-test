@@ -9,8 +9,8 @@ import base64
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 
 #-------------------------- this should be added after the button press code wiht "4acc" being changes to a value set by the buttons (i think)
-#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 ###making a dataframe wiht appnded old data
 #new_row = pd.DataFrame([['4acc']], columns=['button']) !!!! has been moved below the buttons #Adding 4acc (condition 4 accsept button) to the coulum named button
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
@@ -103,7 +103,8 @@ if 'click' not in st.session_state:
 ## take the button input and puts it in the new row dataframe
 new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
 st.dataframe(new_row)   #!!! remove this before experiment launch
-
+newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
+gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
 #show button with link to surevery only after a button has been cliked 
 if st.session_state.click != 'button not cliked':
