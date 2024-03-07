@@ -21,6 +21,24 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 
 import streamlit_antd_components as sac
+import st-btn-group
+
+buttons = [
+    {
+        "label": "Button 1",
+        "style": {"backgroundColor": "red", "color": "white"},
+    },
+    {
+        "label": "Button 2",
+    },
+    {
+        "label": "Button 3",
+        "style": {"backgroundColor": "green", "color": "white"},
+    },
+]
+
+st_btn_group(buttons=buttons, key="5")
+
 
 sac.buttons([
     sac.ButtonsItem(label='button'),
