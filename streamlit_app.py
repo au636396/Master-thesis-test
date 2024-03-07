@@ -64,6 +64,9 @@ col1, col2, col4, col5 = st.columns([3,2,2,3])
 # 3 = Right, same
 # 4 = Rigth, diffrent 
 
+#if no buttons has been cliked it gets filed wiht button not cliked
+if 'click' not in st.session_state:
+    st.session_state['click'] = 'button not cliked'
 
 # Show different content based on the user session number.
 if st.session_state.condition == 1:  # con 1
@@ -98,8 +101,6 @@ else:
     st.write("An error has occurred, please reload the page!")
     
 
-if 'click' not in st.session_state:
-    st.session_state['click'] = 'button not cliked'
 ## take the button input and puts it in the new row dataframe
 new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
 st.dataframe(new_row)   #!!! remove this before experiment launch
