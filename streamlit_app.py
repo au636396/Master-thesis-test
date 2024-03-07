@@ -30,16 +30,13 @@ buttons = [
     },
     {
         "label": " Afvis alle ",
+        "style": {"color": "black"},
     },
 ]
 
-st_btn_group(buttons=buttons, key="5", gap_between_buttons = 54, size='default', align ='center')
+st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 
-sac.buttons([
-    sac.ButtonsItem(label='button'),
-    sac.ButtonsItem(label='button1', color='#F1F1F1'),
-], label='label', align='center', gap='xl', color='green')
 
 
 # function that add a bacgournd picture 
