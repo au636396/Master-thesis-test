@@ -40,7 +40,6 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
-    
 set_background('generic_website.png')
 
 
@@ -62,7 +61,7 @@ if "condition" not in st.session_state:
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
-with st.container(height=100):
+with st.container(height=50):
     with col2: st.image('basic_cookie.png')
     with col2: st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
