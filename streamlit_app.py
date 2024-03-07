@@ -20,21 +20,10 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 #--------------------------------
 
 
-import streamlit_antd_components as sac
+#import streamlit_antd_components as sac not in use
 from st_btn_group import st_btn_group
 
-buttons = [
-    {
-        "label": "Accepter alle",
-        "style": {"backgroundColor": "lightgreen", "color": "black"},
-    },
-    {
-        "label": " Afvis alle ",
-        "style": {"color": "black"},
-    },
-]
 
-st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 
 
@@ -57,6 +46,21 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
 set_background('generic_website.png')
+
+
+buttons = [
+    {
+        "label": "Accepter alle",
+        "style": {"backgroundColor": "lightgreen", "color": "black"},
+    },
+    {
+        "label": " Afvis alle ",
+        "style": {"color": "black"},
+    },
+]
+
+
+st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
