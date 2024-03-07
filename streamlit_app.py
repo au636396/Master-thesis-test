@@ -25,19 +25,15 @@ from st_btn_group import st_btn_group
 
 buttons = [
     {
-        "label": "Button 1",
-        "style": {"backgroundColor": "red", "color": "white"},
+        "label": "Accepter alle",
+        "style": {"backgroundColor": "green", "color": "black"},
     },
     {
-        "label": "Button 2",
-    },
-    {
-        "label": "Button 3",
-        "style": {"backgroundColor": "green", "color": "white"},
+        "label": " Afvis alle ",
     },
 ]
 
-st_btn_group(buttons=buttons, key="5")
+st_btn_group(buttons=buttons, key="5", gap_between_buttons = 54)
 
 
 sac.buttons([
