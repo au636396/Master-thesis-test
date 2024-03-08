@@ -60,24 +60,12 @@ buttons = [
 ]
 
 
-
-st.markdown(
-    """
+css_body_container = f'''
 <style>
-    div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
-        border: 1px solid red;
-    }
+    [data-testid="stVerticalBlock"] {{background-color:rgba(255,255,255,1)}}
 </style>
-""",
-    unsafe_allow_html=True,
-)
-
-#css_body_container = f'''
-#<style>
-#    [data-testid="stVerticalBlock"] {{background-color:rgba(255,255,255,1)}}
-#</style>
-#'''
-#st.markdown(css_body_container,unsafe_allow_html=True)
+'''
+st.markdown(css_body_container,unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
