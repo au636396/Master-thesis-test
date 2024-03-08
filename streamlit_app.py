@@ -124,7 +124,7 @@ else:
 
 ## take the button input and puts it in the new row dataframe
 new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
-st.dataframe(new_row)   #!!! remove this before experiment launch
+#st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
