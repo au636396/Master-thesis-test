@@ -44,7 +44,8 @@ def set_background(png_file):
 
 css_body_container = f'''
 <style>
-    {{background-color:rgba(175,238,238,.2)}}
+    [data-testid="stSidebar"] + section [data-testid="stVerticalBlock"] div:nth-of-type({body})
+    [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,.2)}}
 </style>
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
@@ -67,7 +68,7 @@ if "condition" not in st.session_state:
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
-with st.container(height=500, border=True) and col2:
+with st.container(height=500, border=True):
     st.image('basic_cookie.png')
     st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
