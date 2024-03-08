@@ -40,11 +40,11 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
-#set_background('generic_website.png')
+set_background('generic_website.png')
 
 css_body_container = f'''
 <style>
-    [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,1)}}
+    [data-testid="stVerticalBlock"] {{background-color:rgba(255,255,255,1)}}
 </style>
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
