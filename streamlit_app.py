@@ -47,12 +47,6 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('generic_website.png')
 
-css_body_container = f'''
-<style>
-    [data-testid="stVerticalBlock"] {{background-color:rgba(255,255,255,1)}}
-</style>
-'''
-st.markdown(css_body_container,unsafe_allow_html=True)
 
 buttons = [
     {
@@ -67,6 +61,23 @@ buttons = [
 
 
 
+st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
+        border: 1px solid red;
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
+#css_body_container = f'''
+#<style>
+#    [data-testid="stVerticalBlock"] {{background-color:rgba(255,255,255,1)}}
+#</style>
+#'''
+#st.markdown(css_body_container,unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
@@ -74,6 +85,8 @@ with col2:
     with st.container(border=True):
         st.image('basic_cookie.png')
         st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
+
+
 
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
