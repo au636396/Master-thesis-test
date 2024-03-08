@@ -67,7 +67,7 @@ css_body_container = f'''
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([1,4,1])
+col1, col2, col3 = st.columns([2,4,2])
 # making the cookie banner apir
 with col2:
     with st.container():
