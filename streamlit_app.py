@@ -70,7 +70,7 @@ buttons = [
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
-with coll2:
+with col2:
     with st.container(border=True):
         st.image('basic_cookie.png')
         st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
