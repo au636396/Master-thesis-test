@@ -67,7 +67,7 @@ if "condition" not in st.session_state:
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
-with st.container(height=500, border=True):
+with st.container(height=500, border=True) and col2:
     st.image('basic_cookie.png')
     st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
