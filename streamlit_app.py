@@ -44,7 +44,6 @@ def set_background(png_file):
 
 css_body_container = f'''
 <style>
-    [data-testid="stSidebar"] + section [data-testid="stVerticalBlock"] div:nth-of-type({body})
     [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,.2)}}
 </style>
 '''
