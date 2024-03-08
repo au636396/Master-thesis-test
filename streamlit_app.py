@@ -21,7 +21,7 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 
 from st_btn_group import st_btn_group
-
+#from streamlit_extras.stylable_container import stylable_container
 
 
 # function that add a bacgournd picture 
@@ -42,6 +42,12 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('generic_website.png')
 
+css_body_container = f'''
+<style>
+    [data-testid="stSidebar"] + section [data-testid="stVerticalBlock"] div:nth-of-type({body})
+    [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,.2)}}
+</style>
+'''
 
 buttons = [
     {
