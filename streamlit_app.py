@@ -44,7 +44,7 @@ def set_background(png_file):
 
 css_body_container = f'''
 <style>
-    [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,.2)}}
+    [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,1)}}
 </style>
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
