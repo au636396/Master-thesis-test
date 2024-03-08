@@ -48,6 +48,7 @@ css_body_container = f'''
     [data-testid="stVerticalBlock"] {{background-color:rgba(175,238,238,.2)}}
 </style>
 '''
+st.markdown(css_body_container,unsafe_allow_html=True)
 
 buttons = [
     {
