@@ -133,6 +133,8 @@ if st.session_state.click != 'button not cliked':
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
+st.dataframe(new_row)
+
 #show button with link to surevery only after a button has been cliked 
 if st.session_state.click != 'button not cliked':
     st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
