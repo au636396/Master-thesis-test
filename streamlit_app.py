@@ -74,8 +74,11 @@ with col2:
         st.image('basic_cookie.png')
         st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
+#.stVerticalBlock
 
-
+.stHorizontalBlock {
+    width="704"
+}
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
 col1, col2, col4, col5 = st.columns([3,2,2,3])
