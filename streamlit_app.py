@@ -83,7 +83,7 @@ with col2:
     container = f"""
     <style>
         .stHorizontalBlock {{
-        width="704"
+        width="400"
         }}
     </style>
     """
