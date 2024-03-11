@@ -48,7 +48,9 @@ set_background('generic_website.png')
 
 
 buttons1 = [
-    { "label": "Accepter alle", "style": {"backgroundColor": "lightgreen", "color": "black", "onClick" : "st.session_state['click'] = 'accepter1'"},
+    { "label": "Accepter alle", "style": {"backgroundColor": "lightgreen", 
+                                          "color": "black", 
+                                          "onClick" : "st.session_state['click'] = 'accepter1'"},
     },
     {"label": " Afvis alle ", "style": {"color": "black"},
     },
