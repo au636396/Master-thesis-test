@@ -16,6 +16,10 @@ from st_btn_group import st_btn_group
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
+#if no buttons has been cliked it gets filed wiht button not cliked
+if 'click' not in st.session_state:
+    st.session_state["click"] = "button not cliked"
+
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 
@@ -94,18 +98,8 @@ css_body_container = f'''
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
  
-
+#defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
-# making the cookie banner apir
-#with col2:
-#    with st.container():
-#        st.image('cookies_text.png')
-#        button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
-
-#if button_cliked:
-#    st.write(button_cliked)
-
-
 
 #if no buttons has been cliked it gets filed wiht button not cliked
 if 'click' not in st.session_state:
