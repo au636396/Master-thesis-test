@@ -50,7 +50,7 @@ set_background('generic_website.png')
 buttons1 = [
     { "label": "Accepter alle", "style": {"backgroundColor": "lightgreen", 
                                           "color": "black", 
-                                          "onClick" : "st.session_state['click'] = 'accepter1'"},
+                                          "return_value" : True},
     },
     {"label": " Afvis alle ", "style": {"color": "black"},
     },
@@ -73,7 +73,10 @@ col1, col2, col3 = st.columns([1,4,1])
 with col2:
     with st.container():
         st.image('cookies_text.png')
-        st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
+        button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
+
+if button_cliked:
+    st.write("button_cliked")
 
 #.stVerticalBlock
 
