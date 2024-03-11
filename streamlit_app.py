@@ -62,7 +62,7 @@ buttons = [
 
 css_body_container = f'''
 <style>
-    [data-testid="stVerticalBlockBorderWrapper"] {{
+    [data-testid="st-emotion-cache-1wmy9hl e1f1d6gn1"] {{
     background-color:rgba(255,255,255,1)
     }}
 </style>
@@ -82,6 +82,7 @@ with col2:
 
 #.stHorizontalBlock
 #st-emotion-cache-115gedg e1f1d6gn3
+#st-emotion-cache-1wmy9hl e1f1d6gn1
 #stVerticalBlockBorderWrapper
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
