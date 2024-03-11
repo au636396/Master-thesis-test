@@ -76,9 +76,20 @@ with col2:
 
 #.stVerticalBlock
 
-.stHorizontalBlock {
-    width="704"
-}
+#.stHorizontalBlock {
+#    width="704"
+#}
+       
+    container = f"""
+    <style>
+        .stHorizontalBlock {{
+        width="704"
+        }}
+    </style>
+    """
+    st.markdown(container, unsafe_allow_html=True)
+
+
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
 col1, col2, col4, col5 = st.columns([3,2,2,3])
