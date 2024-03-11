@@ -62,7 +62,7 @@ buttons = [
 
 css_body_container = f'''
 <style>
-    [data-testid="stHorizontalBlock"] {{
+    [data-testid="stVerticalBlock"] {{
     width="400";
     background-color: #FFFFFF;
     }}
