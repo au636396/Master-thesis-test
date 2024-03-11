@@ -28,8 +28,8 @@ if 'click' not in st.session_state:
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 
 #-------------------------- this should be added after the button press code wiht "4acc" being changes to a value set by the buttons (i think)
-#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 
 #----------this is now futher down the code---------
 ###making a dataframe wiht appnded old data
