@@ -4,7 +4,13 @@ import random
 import gspread
 import gspread_dataframe as gd
 import base64
+from st_btn_group import st_btn_group
 
+### condition number meaning:
+# 1 = Left, same   
+# 2 = Left, diffrent
+# 3 = Right, same
+# 4 = Rigth, diffrent 
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
@@ -25,7 +31,7 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 #--------------------------------
 
 
-from st_btn_group import st_btn_group
+
 
 
 # function that add a bacgournd picture 
@@ -100,20 +106,30 @@ if button_cliked:
     st.write(button_cliked)
 
 
-#defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
-col1, col2, col4, col5 = st.columns([3,2,2,3])
-
-### condition number meaning:
-# 1 = Left, same   
-# 2 = Left, diffrent
-# 3 = Right, same
-# 4 = Rigth, diffrent 
 
 #if no buttons has been cliked it gets filed wiht button not cliked
 if 'click' not in st.session_state:
     st.session_state['click'] = 'button not cliked'
 
-
+if st.session_state.condition == 1:  # con 1
+    with col2:
+        button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
+            st.session_state["click"] = button_cliked
+elif st.session_state.condition == 2:  # con 2
+    with col2:
+        button_cliked = st_btn_group(buttons=buttons2, key="5", gap_between_buttons = 45, size='default', align ='center')
+            st.session_state["click"] = button_cliked
+elif st.session_state.condition == 2:  # con 2
+    with col2:
+        button_cliked = st_btn_group(buttons=buttons3, key="5", gap_between_buttons = 45, size='default', align ='center')
+            st.session_state["click"] = button_cliked
+elif st.session_state.condition == 2:  # con 2
+    with col2:
+        button_cliked = st_btn_group(buttons=buttons4, key="5", gap_between_buttons = 45, size='default', align ='center')
+            st.session_state["click"] = button_cliked
+else:
+    st.write("An error has occurred, please reload the page!")
+        
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 if st.session_state.click != 'button not cliked':
     new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
@@ -132,6 +148,11 @@ if st.session_state.click != 'button not cliked':
 
 
 ###-------------------- old code for showinr the numberes------ 
+
+
+#defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
+col1, col2, col4, col5 = st.columns([3,2,2,3])
+
 # Show different content based on the user session number.
 #if st.session_state.condition == 1:  # con 1
 #    with col2:
