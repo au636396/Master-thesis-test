@@ -51,11 +51,11 @@ buttons1 = [
     { "label": "Accepter alle",
      "backgroundColor": "lightgreen", 
      "color": "black", 
-     "value": "accepter1",},
+     "value": "accepter1",
     },
     {"label": " Afvis alle ", 
      "color": "black", 
-     "value": "afvis1",},
+     "value": "afvis1",
     },
 ]
 
