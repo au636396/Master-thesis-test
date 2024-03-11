@@ -49,13 +49,9 @@ set_background('generic_website.png')
 
 
 buttons = [
-    {
-        "label": "Accepter alle",
-        "style": {"backgroundColor": "lightgreen", "color": "black"},
+    { "label": "Accepter alle", "style": {"backgroundColor": "lightgreen", "color": "black"},
     },
-    {
-        "label": " Afvis alle ",
-        "style": {"color": "black"},
+    {"label": " Afvis alle ", "style": {"color": "black"},
     },
 ]
 
@@ -63,14 +59,12 @@ buttons = [
 css_body_container = f'''
 <style>
     [data-testid="stVerticalBlock"] {{
-    width="400";
     background-color: #FFFFFF;
     }}
 </style>
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
  
-    
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
