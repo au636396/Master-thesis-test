@@ -64,9 +64,9 @@ set_background('generic_website.png')
 #-------------------deifnng the way the buttons can look---------
 #con1
 buttons1 = [
-    {"label": "Accepter alle", "value": "accepter1", "style": { "color": "black", },
+    {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
     },
-    {"label": " Afvis alle ",  "value": "afvis1", "style": { "color": "black", },
+    {"label": " Afvis alle ",  "value": "afvis1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
     },
 ]
 #con 2
@@ -78,9 +78,9 @@ buttons2 = [
 ]
 #con 3
 buttons3 = [
-    {"label": " Afvis alle ",  "value": "afvis3", "style": { "color": "black", },
+    {"label": " Afvis alle ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },
     },
-    {"label": "Accepter alle", "value": "accepter3", "style": {"color": "black", },
+    {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },
     },
 ]
 #con 4
