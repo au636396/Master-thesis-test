@@ -55,7 +55,7 @@ buttons1 = [
      "style": {"color": "black", "backgroundColor": "lightgreen"}},
     {"label": " Afvis alle ", 
      "value": "afvis1",
-     "style": {"color": "black}},
+     "style": {"color": "black}}
 ]
 #con 2
 buttons2 = [
