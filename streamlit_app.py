@@ -49,14 +49,14 @@ set_background('generic_website.png')
 
 #-------------------deifnng the way the buttons can look---------
 #con 1
-buttonsx = [
-    { "label": "Accepter alle",
-     "value": "Accepter1",
-     "style": {"color": "black", "backgroundColor": "lightgreen"},},
-    {"label": " Afvis alle ", 
-     "value": "afvis1",
-     "style": {"color": "black},}
-]
+#buttons1 = [
+#    { "label": "Accepter alle",
+#     "value": "Accepter1",
+#     "style": {"color": "black", "backgroundColor": "lightgreen"},},
+#    {"label": " Afvis alle ", 
+#     "value": "afvis1",
+#     "style": {"color": "black},}
+#]
 
 
 buttons1 = [
