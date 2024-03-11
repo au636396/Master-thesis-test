@@ -62,9 +62,9 @@ buttons = [
 
 css_body_container = f'''
 <style>
-    [data-testid="stVerticalBlockBorderWrapper"] {{
-    background-color: #FFFFFF;
+    [data-testid="stVerticalBlock"] {{
     width="400";
+    background-color: #FFFFFF;
     }}
 </style>
 '''
