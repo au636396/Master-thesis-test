@@ -62,8 +62,8 @@ buttons = [
 
 css_body_container = f'''
 <style>
-    [data-testid="st-emotion-cache-1wmy9hl e1f1d6gn1"] {{
-    background-color:rgba(255,255,255,1)
+    [data-testid="stVerticalBlock"] {{
+    background-color: #FFFFFF;
     }}
 </style>
 '''
