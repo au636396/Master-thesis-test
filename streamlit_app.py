@@ -114,20 +114,28 @@ if 'click' not in st.session_state:
 #makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
-        button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
-        st.session_state["click"] = button_cliked
+            with st.container():
+                st.image('cookies_text.png')
+                button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
+                st.session_state["click"] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
-        st.session_state["click"] = button_cliked
+            with st.container():
+                st.image('cookies_text.png')
+                button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
+                st.session_state["click"] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-        st.session_state["click"] = button_cliked
+            with st.container():
+                st.image('cookies_text.png')
+                button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
+                st.session_state["click"] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
-        st.session_state["click"] = button_cliked
+            with st.container():
+                st.image('cookies_text.png')
+                button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
+                st.session_state["click"] = button_cliked
 else:
     st.write("An error has occurred, please reload the page!")
         
