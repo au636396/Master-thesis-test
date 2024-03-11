@@ -129,7 +129,7 @@ else:
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-if st.session_state.click != 'button not cliked' or None:
+if st.session_state.click != 'button not cliked':
     new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
     st.dataframe(new_row)
 #st.dataframe(new_row)   #!!! remove this before experiment launch
@@ -139,5 +139,5 @@ if st.session_state.click != 'button not cliked' or None:
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #show button with link to surevery only after a button has been cliked 
-if st.session_state.click != 'button not cliked' or None:
+if st.session_state.click != 'button not cliked':
     st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
