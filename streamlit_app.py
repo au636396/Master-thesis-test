@@ -17,31 +17,18 @@ if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
 #if no buttons has been cliked it gets filed wiht button not cliked
-#if 'click' not in st.session_state:
-#    st.session_state["click"] = "button not cliked"
-
-#if no buttons has been cliked it gets filed wiht button not cliked
 if 'click' not in st.session_state:
     st.session_state['click'] = 'button not cliked'
+st.write(st.session_state['click']) #for tesing can be removed 
 
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 
-#-------------------------- this should be added after the button press code wiht "4acc" being changes to a value set by the buttons (i think)
-olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+#-------------------------- active one you want to "turn on" tracing 
+#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 
-#----------this is now futher down the code---------
-###making a dataframe wiht appnded old data
-#new_row = pd.DataFrame([['4acc']], columns=['button']) !!!! has been moved below the buttons #Adding 4acc (condition 4 accsept button) to the coulum named button
-#newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
-#gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
-#--------------------------------
-
-
-
-
-
+#---------------------------- adding baground pictue--------------------------------------------------------
 # function that add a bacgournd picture 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -61,7 +48,7 @@ def set_background(png_file):
 set_background('generic_website.png')
 
 
-#-------------------deifnng the way the buttons can look---------
+#-------------------deifnng the way the buttons and container looks ---------------------------------------------------
 #con1
 buttons1 = [
     {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
@@ -91,7 +78,6 @@ buttons4 = [
     },
 ]
 
-
 #making the container baggruound white
 css_body_container = f'''
 <style>
@@ -101,11 +87,13 @@ css_body_container = f'''
 </style>
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
- 
-#defining the colums the buttons and text will apier in
+
+
+#-------------------------------------------------- making the text and buttons apier ----------
+# defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
 
-#makeing the buttons show up depending on condition
+# makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
             with st.container():
@@ -132,16 +120,17 @@ elif st.session_state.condition == 4:  # con 4
                 st.session_state["click"] = button_cliked
 else:
     st.write("An error has occurred, please reload the page!")
-        
+
+#--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 if st.session_state.click != 'button not cliked':
     new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
     st.dataframe(new_row)
-st.dataframe(new_row)   #!!! remove this before experiment launch
-newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
-gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
+#st.dataframe(new_row)   #!!! remove this before experiment launch
+#newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
+#gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
-
+st.write(st.session_state['click']) #for tesing can be removed 
 
 #show button with link to surevery only after a button has been cliked 
 if st.session_state.click != 'button not cliked':
