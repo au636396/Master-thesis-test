@@ -64,6 +64,7 @@ css_body_container = f'''
 <style>
     [data-testid="stVerticalBlock"] {{
     background-color: #FFFFFF;
+    width="400";
     }}
 </style>
 '''
