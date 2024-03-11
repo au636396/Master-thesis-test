@@ -129,11 +129,12 @@ else:
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 if st.session_state.click != 'button not cliked':
     new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
+    st.dataframe(new_row)
 #st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
-st.dataframe(new_row)
+
 
 #show button with link to surevery only after a button has been cliked 
 if st.session_state.click != 'button not cliked':
