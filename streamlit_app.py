@@ -97,13 +97,13 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
-with col2:
-    with st.container():
-        st.image('cookies_text.png')
-        button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
+#with col2:
+#    with st.container():
+#        st.image('cookies_text.png')
+#        button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
 
-if button_cliked:
-    st.write(button_cliked)
+#if button_cliked:
+#    st.write(button_cliked)
 
 
 
@@ -111,21 +111,22 @@ if button_cliked:
 if 'click' not in st.session_state:
     st.session_state['click'] = 'button not cliked'
 
+#makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
-        button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
+        button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
         st.session_state["click"] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        button_cliked = st_btn_group(buttons=buttons2, key="5", gap_between_buttons = 45, size='default', align ='center')
+        button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
         st.session_state["click"] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        button_cliked = st_btn_group(buttons=buttons3, key="5", gap_between_buttons = 45, size='default', align ='center')
+        button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
         st.session_state["click"] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
-        button_cliked = st_btn_group(buttons=buttons4, key="5", gap_between_buttons = 45, size='default', align ='center')
+        button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
         st.session_state["click"] = button_cliked
 else:
     st.write("An error has occurred, please reload the page!")
