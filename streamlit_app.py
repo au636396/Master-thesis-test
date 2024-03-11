@@ -17,8 +17,12 @@ if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
 #if no buttons has been cliked it gets filed wiht button not cliked
+#if 'click' not in st.session_state:
+#    st.session_state["click"] = "button not cliked"
+
+#if no buttons has been cliked it gets filed wiht button not cliked
 if 'click' not in st.session_state:
-    st.session_state["click"] = "button not cliked"
+    st.session_state['click'] = 'button not cliked'
 
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
@@ -100,10 +104,6 @@ st.markdown(css_body_container,unsafe_allow_html=True)
  
 #defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
-
-#if no buttons has been cliked it gets filed wiht button not cliked
-if 'click' not in st.session_state:
-    st.session_state['click'] = 'button not cliked'
 
 #makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
