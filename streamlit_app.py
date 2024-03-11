@@ -124,13 +124,13 @@ elif st.session_state.condition == 2:  # con 2
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
                 st.session_state["click"] = button_cliked
-elif st.session_state.condition == 2:  # con 2
+elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
                 st.session_state["click"] = button_cliked
-elif st.session_state.condition == 2:  # con 2
+elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
                 st.image('cookies_text.png')
