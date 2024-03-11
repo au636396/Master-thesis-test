@@ -48,54 +48,33 @@ set_background('generic_website.png')
 
 
 #-------------------deifnng the way the buttons can look---------
-#con 1
-#buttons1 = [
-#    { "label": "Accepter alle",
-#     "value": "Accepter1",
-#     "style": {"color": "black", "backgroundColor": "lightgreen"},},
-#    {"label": " Afvis alle ", 
-#     "value": "afvis1",
-#     "style": {"color": "black},}
-#]
-
-
+#con1
 buttons1 = [
-    {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen", "color": "black", },
+    {"label": "Accepter alle", "value": "accepter1", "style": { "color": "black", },
     },
     {"label": " Afvis alle ",  "value": "afvis1", "style": { "color": "black", },
     },
 ]
-
-
 #con 2
 buttons2 = [
-    { "label": "Accepter alle",
-     "backgroundColor": "lightgreen", 
-     "color": "black", 
-     "value": "accepter2",},
-    {"label": " Afvis alle ", 
-     "color": "black", 
-     "value": "afvis2",},
+    {"label": "Accepter alle", "value": "accepter2", "style": {"backgroundColor": "lightgreen", "color": "black", },
+    },
+    {"label": " Afvis alle ",  "value": "afvis2", "style": { "color": "black", },
+    },
 ]
 #con 3
 buttons3 = [
-    {"label": " Afvis alle ", 
-     "color": "black", 
-     "value": "afvis3",},
-    { "label": "Accepter alle",
-     "backgroundColor": "lightgreen", 
-     "color": "black", 
-     "value": "accepter3",},
+    {"label": " Afvis alle ",  "value": "afvis3", "style": { "color": "black", },
+    },
+    {"label": "Accepter alle", "value": "accepter3", "style": {"color": "black", },
+    },
 ]
 #con 4
 buttons4 = [
-    {"label": " Afvis alle ", 
-     "color": "black", 
-     "value": "afvis4",},
-    { "label": "Accepter alle",
-     "backgroundColor": "lightgreen", 
-     "color": "black", 
-     "value": "accepter4",},
+    {"label": " Afvis alle ",  "value": "afvis4", "style": { "color": "black", },
+    },
+    {"label": "Accepter alle", "value": "accepter4", "style": {"backgroundColor": "lightgreen", "color": "black", },
+    },
 ]
 
 
