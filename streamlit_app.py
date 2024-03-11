@@ -76,7 +76,7 @@ with col2:
         button_cliked = st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 if button_cliked:
-    st.write("button_cliked")
+    st.write(button_cliked)
 
 #.stVerticalBlock
 
