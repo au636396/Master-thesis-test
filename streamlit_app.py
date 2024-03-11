@@ -26,7 +26,6 @@ gc = gspread.service_account(filename='~/.config/gspread/service_account.json') 
 
 
 from st_btn_group import st_btn_group
-#from streamlit_extras.stylable_container import stylable_container
 
 
 # function that add a bacgournd picture 
@@ -48,7 +47,7 @@ def set_background(png_file):
 set_background('generic_website.png')
 
 
-buttons = [
+buttons1 = [
     { "label": "Accepter alle", "style": {"backgroundColor": "lightgreen", "color": "black"},
     },
     {"label": " Afvis alle ", "style": {"color": "black"},
@@ -56,6 +55,7 @@ buttons = [
 ]
 
 
+#making the container baggruound white
 css_body_container = f'''
 <style>
     [data-testid="stVerticalBlock"] {{
@@ -71,7 +71,7 @@ col1, col2, col3 = st.columns([1,4,1])
 with col2:
     with st.container():
         st.image('cookies_text.png')
-        st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
+        st_btn_group(buttons=buttons1, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 #.stVerticalBlock
 
@@ -126,8 +126,9 @@ else:
     st.write("An error has occurred, please reload the page!")
     
 
-## take the button input and puts it in the new row dataframe
-new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
+## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
+if st.session_state.click != 'button not cliked':
+    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
 #st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
