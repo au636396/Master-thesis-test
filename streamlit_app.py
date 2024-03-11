@@ -50,9 +50,10 @@ set_background('generic_website.png')
 buttons1 = [
     { "label": "Accepter alle", "style": {"backgroundColor": "lightgreen", 
                                           "color": "black", 
-                                          "return_value" : True},
+                                          "value": "accepter1",},
     },
-    {"label": " Afvis alle ", "style": {"color": "black"},
+    {"label": " Afvis alle ", "style": { "color": "black", 
+                                         "value": "afvis1",},
     },
 ]
 
