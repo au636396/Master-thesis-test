@@ -156,11 +156,11 @@ if st.session_state.click != 'button not cliked':
 
 
 
-###-------------------- old code for showinr the numberes------ 
+###-------------------- old code for showinr the numberes--------------------------------------------------- 
 
 
 #defining the placment of the coloums (used for placing buttons). The st.coloum part defines how big each colum is so 2 is dubble as big as 1
-col1, col2, col4, col5 = st.columns([3,2,2,3])
+#col1, col2, col4, col5 = st.columns([3,2,2,3])
 
 # Show different content based on the user session number.
 #if st.session_state.condition == 1:  # con 1
