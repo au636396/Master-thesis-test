@@ -76,7 +76,7 @@ col1, col2, col3 = st.columns([1,4,1])
 # making the cookie banner apir
 with col2:
     with st.container():
-        st.image('cookie_text.png')
+        st.image('cookies_text.png')
         st_btn_group(buttons=buttons, key="5", gap_between_buttons = 45, size='default', align ='center')
 
 #.stVerticalBlock
