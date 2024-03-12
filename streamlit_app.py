@@ -152,6 +152,7 @@ st.write(st.session_state['click']) #for tesing can be removed
 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
         new_row = pd.DataFrame([button_cliked], columns=['button']) 
+else: new_row = pd.DataFrame(['button not cliked'], columns=['button']) 
 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
         st.dataframe(new_row)   #!!! remove this before experiment launch
