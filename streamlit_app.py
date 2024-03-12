@@ -103,41 +103,47 @@ col1, col2, col3 = st.columns([1,4,1])
 
 st.write(st.session_state['click']) #for tesing can be removed 
 
-# makeing the buttons show up depending on condition
-if st.session_state.condition == 1:  # con 1
-    with col2:
+with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
                 st.session_state['click'] = button_cliked
-elif st.session_state.condition == 2:  # con 2
-    with col2:
-            with st.container():
-                st.image('cookies_text.png')
-                button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
-                st.session_state['click'] = button_cliked
-elif st.session_state.condition == 3:  # con 3
-    with col2:
-            with st.container():
-                st.image('cookies_text.png')
-                button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-                st.session_state['click'] = button_cliked
-elif st.session_state.condition == 4:  # con 4
-    with col2:
-            with st.container():
-                st.image('cookies_text.png')
-                button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
-                st.session_state['click'] = button_cliked
-else:
-    st.write("An error has occurred, please reload the page!")
+
+# makeing the buttons show up depending on condition
+#if st.session_state.condition == 1:  # con 1
+#    with col2:
+#            with st.container():
+#                st.image('cookies_text.png')
+#                button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
+#                st.session_state['click'] = button_cliked
+#elif st.session_state.condition == 2:  # con 2
+#    with col2:
+#            with st.container():
+#                st.image('cookies_text.png')
+#                button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
+#                st.session_state['click'] = button_cliked
+#elif st.session_state.condition == 3:  # con 3
+#    with col2:
+#            with st.container():
+#                st.image('cookies_text.png')
+#                button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
+#                st.session_state['click'] = button_cliked
+#elif st.session_state.condition == 4:  # con 4
+#    with col2:
+#            with st.container():
+#                st.image('cookies_text.png')
+#                button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
+#                st.session_state['click'] = button_cliked
+#else:
+#    st.write("An error has occurred, please reload the page!")
     
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-if st.session_state.click.startswith('afvis') or st.session_state.click.startswith('accepter'):
-    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
-    st.dataframe(new_row)
+#if st.session_state.click.startswith('afvis') or st.session_state.click.startswith('accepter'):
+#    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
+#    st.dataframe(new_row)
 #st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
