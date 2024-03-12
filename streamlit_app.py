@@ -53,7 +53,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('generic_website.png')
 
-
+st.write(st.session_state['click']) #for tesing can be removed 
 #-------------------deifnng the way the buttons and container looks ---------------------------------------------------
 #con1
 buttons1 = [
@@ -84,6 +84,8 @@ buttons4 = [
     },
 ]
 
+st.write(st.session_state['click']) #for tesing can be removed 
+
 #making the container baggruound white
 css_body_container = f'''
 <style>
@@ -98,6 +100,8 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 #-------------------------------------------------- making the text and buttons apier ----------
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
+
+st.write(st.session_state['click']) #for tesing can be removed 
 
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
@@ -126,6 +130,8 @@ elif st.session_state.condition == 4:  # con 4
                 st.session_state['click'] = button_cliked
 else:
     st.write("An error has occurred, please reload the page!")
+    
+st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
