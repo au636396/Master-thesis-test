@@ -145,5 +145,5 @@ if st.session_state.click != 'button not cliked' or None or '[]':
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #show button with link to surevery only after a button has been cliked 
-#if st.session_state.click != 'button not cliked':
-#    st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
+if st.session_state.click != 'button not cliked' or None or []:
+    st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
