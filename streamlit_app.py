@@ -109,32 +109,35 @@ if st.session_state.condition == 1:  # con 1
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
-                if button_cliked == 'afvis1' or 'accepter1':
-                    st.session_state['click'] = button_cliked
+#                if button_cliked == 'afvis1' or 'accepter1':
+#                    st.session_state['click'] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
-                if button_cliked == 'afvis2' or 'accepter2':
-                    st.session_state['click'] = button_cliked
+#                if button_cliked == 'afvis2' or 'accepter2':
+#                    st.session_state['click'] = button_cliked
 elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-                if button_cliked == 'afvis3' or 'accepter3':
-                    st.session_state['click'] = button_cliked
+#                if button_cliked == 'afvis3' or 'accepter3':
+#                    st.session_state['click'] = button_cliked
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
-                if button_cliked == 'afvis4' or 'accepter4':
-                    st.session_state['click'] = button_cliked
+#                if button_cliked == 'afvis4' or 'accepter4':
+#                    st.session_state['click'] = button_cliked
 else:
     st.write("An error has occurred, please reload the page!")
-    
+
+if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
+                    st.session_state['click'] = button_cliked
+
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
