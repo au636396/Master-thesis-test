@@ -78,7 +78,6 @@ buttons4 = [
     },
 ]
 
-st.write(st.session_state['click']) #for tesing can be removed 
 
 #making the container baggruound white
 css_body_container = f'''
