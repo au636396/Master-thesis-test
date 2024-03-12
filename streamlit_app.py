@@ -151,10 +151,10 @@ st.write(st.session_state['click']) #for tesing can be removed
 #    st.dataframe(new_row)
 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-    new_row = pd.DataFrame([button_cliked], columns=['button']) 
+        new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-    st.dataframe(new_row)   #!!! remove this before experiment launch
+        st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
@@ -162,4 +162,4 @@ st.write(st.session_state['click']) #for tesing can be removed
 
 #show button with link to surevery only after a button has been cliked 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-    st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
+        st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
