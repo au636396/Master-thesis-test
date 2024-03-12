@@ -133,21 +133,21 @@ else:
 
 
 if button_cliked == 'afvis1':
-        new_row = pd.DataFrame([afvis1], columns=['button']) 
+        new_row = pd.DataFrame(["afvis1"], columns=['button']) 
 elif button_cliked == 'accepter1':
-        new_row = pd.DataFrame([accepter1], columns=['button']) 
+        new_row = pd.DataFrame(["accepter1"], columns=['button']) 
 elif button_cliked == 'afvis2':
-        new_row = pd.DataFrame([afvis2], columns=['button']) 
+        new_row = pd.DataFrame(["afvis2"], columns=['button']) 
 elif button_cliked == 'accepter2':
-        new_row = pd.DataFrame([accepter2], columns=['button']) 
+        new_row = pd.DataFrame(["accepter2"], columns=['button']) 
 elif button_cliked == 'afvis3':
-        new_row = pd.DataFrame([afvis3], columns=['button']) 
+        new_row = pd.DataFrame(["afvis3"], columns=['button']) 
 elif button_cliked == 'accepter3':
-        new_row = pd.DataFrame([accepter3], columns=['button']) 
+        new_row = pd.DataFrame(["accepter3"], columns=['button']) 
 elif button_cliked == 'afvis4':
-        new_row = pd.DataFrame([afvis4], columns=['button']) 
+        new_row = pd.DataFrame(["afvis4"], columns=['button']) 
 elif button_cliked == 'accepter4':
-        new_row = pd.DataFrame([accepter4], columns=['button']) 
+        new_row = pd.DataFrame(["accepter4"], columns=['button']) 
 
 #show data frame if it exxists if not print not yet
 try: st.dataframe(new_row) 
