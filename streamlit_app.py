@@ -150,9 +150,22 @@ st.write(st.session_state['click']) #for tesing can be removed
 #    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
 #    st.dataframe(new_row)
 
-if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-        new_row = pd.DataFrame([button_cliked], columns=['button']) 
-else: new_row = pd.DataFrame(['button not cliked'], columns=['button']) 
+if button_cliked == 'afvis1':
+        new_row = pd.DataFrame([afvis1], columns=['button']) 
+else button_cliked == 'accepter1':
+        new_row = pd.DataFrame([accepter1], columns=['button']) 
+else button_cliked == 'afvis2' 
+        new_row = pd.DataFrame([afvis2], columns=['button']) 
+else button_cliked == 'accepter2':
+        new_row = pd.DataFrame([accepter2], columns=['button']) 
+else button_cliked == 'afvis3' 
+        new_row = pd.DataFrame([afvis3], columns=['button']) 
+else button_cliked == 'accepter3':
+        new_row = pd.DataFrame([accepter3], columns=['button']) 
+else button_cliked == 'afvis4' 
+        new_row = pd.DataFrame([afvis4], columns=['button']) 
+else button_cliked == 'accepter4' 
+        new_row = pd.DataFrame([accepter4], columns=['button']) 
 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
         st.dataframe(new_row)   #!!! remove this before experiment launch
