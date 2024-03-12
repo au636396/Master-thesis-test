@@ -158,7 +158,6 @@ else: st.dataframe(new_row)
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
-st.write(st.session_state['click']) #for tesing can be removed 
 
 #show button with link to surevery only after a button has been cliked 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
