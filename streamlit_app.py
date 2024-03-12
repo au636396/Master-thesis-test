@@ -16,12 +16,6 @@ from st_btn_group import st_btn_group
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
-#if no buttons has been cliked it gets filed wiht button not cliked
-
-
-#if 'click' not in st.session_state:
-#    st.session_state['click'] = 'button not cliked'
-
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 
@@ -90,7 +84,7 @@ css_body_container = f'''
 st.markdown(css_body_container,unsafe_allow_html=True)
 
 
-#-------------------------------------------------- making the text and buttons apier ----------
+#-------------------------------------------------- making the text and buttons apier ------------------------
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
 
@@ -100,37 +94,27 @@ if st.session_state.condition == 1:  # con 1
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
-#                if button_cliked == 'afvis1' or 'accepter1':
-#                    st.session_state['click'] = button_cliked
 elif st.session_state.condition == 2:  # con 2
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
-#                if button_cliked == 'afvis2' or 'accepter2':
-#                    st.session_state['click'] = button_cliked
 elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-#                if button_cliked == 'afvis3' or 'accepter3':
-#                    st.session_state['click'] = button_cliked
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
                 st.image('cookies_text.png')
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
-#                if button_cliked == 'afvis4' or 'accepter4':
-#                    st.session_state['click'] = button_cliked
 else:
     st.write("An error has occurred, please reload the page!")
 
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-
-
 if button_cliked == 'afvis1':
         new_row = pd.DataFrame(["afvis1"], columns=['button']) 
 elif button_cliked == 'accepter1':
@@ -151,13 +135,12 @@ elif button_cliked == 'accepter4':
 #show data frame if it exxists if not print not yet
 try: st.dataframe(new_row) 
 except NameError: print("not yet")
-else: st.dataframe(new_row) 
 
 #st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
-
+### this needs to be fixed
 #show button with link to surevery only after a button has been cliked 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
         st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
