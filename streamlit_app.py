@@ -168,7 +168,7 @@ elif button_cliked == 'accepter4':
         new_row = pd.DataFrame([accepter4], columns=['button']) 
 
 #if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-if new_row ex is None:
+if new_row is None:
     print(hello)
 else:
     st.dataframe(new_row) 
