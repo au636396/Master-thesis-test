@@ -19,13 +19,8 @@ if "condition" not in st.session_state:
 #if no buttons has been cliked it gets filed wiht button not cliked
 
 
-#!!!!!!!!!!! look into why st.session_state['click'] become "none" after a bit 
-
-
-
-if 'click' not in st.session_state:
-    st.session_state['click'] = 'button not cliked'
-st.write(st.session_state['click']) #for tesing can be removed 
+#if 'click' not in st.session_state:
+#    st.session_state['click'] = 'button not cliked'
 
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
@@ -53,7 +48,6 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('generic_website.png')
 
-st.write(st.session_state['click']) #for tesing can be removed 
 #-------------------deifnng the way the buttons and container looks ---------------------------------------------------
 #con1
 buttons1 = [
@@ -101,8 +95,6 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
 
-st.write(st.session_state['click']) #for tesing can be removed 
-
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
@@ -135,20 +127,10 @@ elif st.session_state.condition == 4:  # con 4
 else:
     st.write("An error has occurred, please reload the page!")
 
-#if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-#    st.session_state['click'] = button_cliked
-#else:
-#    st.session_state['click'] = 'button not cliked'
-
-st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 
-
-#if st.session_state.click != 'button not cliked':
-#    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
-#    st.dataframe(new_row)
 
 if button_cliked == 'afvis1':
         new_row = pd.DataFrame([afvis1], columns=['button']) 
@@ -167,12 +149,7 @@ elif button_cliked == 'afvis4':
 elif button_cliked == 'accepter4':
         new_row = pd.DataFrame([accepter4], columns=['button']) 
 
-#if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-#if not new_row:
-#    print(hello)
-#else:
-#    st.dataframe(new_row) 
-
+#show data frame if it exxists if not print not yet
 try: st.dataframe(new_row) 
 except NameError: print("not yet")
 else: st.dataframe(new_row) 
