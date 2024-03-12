@@ -136,11 +136,10 @@ else:
     st.write("An error has occurred, please reload the page!")
 
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-                    st.session_state['click'] = button_cliked
+    st.session_state['click'] = button_cliked
+else:
+    st.session_state['click'] = 'button not cliked'
 
-t_of_button_cliked = type(button_cliked)
-a = str(t_of_button_cliked)
-st.write(a)
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
