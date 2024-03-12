@@ -135,7 +135,7 @@ st.write(st.session_state['click']) #for tesing can be removed
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-if st.session_state.click != 'button not cliked':
+if st.session_state.click != 'button not cliked' or None or '[]':
     new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
     st.dataframe(new_row)
 #st.dataframe(new_row)   #!!! remove this before experiment launch
