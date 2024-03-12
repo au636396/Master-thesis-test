@@ -138,6 +138,8 @@ else:
 if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
                     st.session_state['click'] = button_cliked
 
+t_of_button_cliked = type(button_cliked)
+st.write(t_of_button_cliked)
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
