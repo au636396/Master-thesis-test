@@ -135,19 +135,26 @@ elif st.session_state.condition == 4:  # con 4
 else:
     st.write("An error has occurred, please reload the page!")
 
-if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
-    st.session_state['click'] = button_cliked
-else:
-    st.session_state['click'] = 'button not cliked'
+#if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
+#    st.session_state['click'] = button_cliked
+#else:
+#    st.session_state['click'] = 'button not cliked'
 
 st.write(st.session_state['click']) #for tesing can be removed 
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-if st.session_state.click != 'button not cliked':
-    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
-    st.dataframe(new_row)
-#st.dataframe(new_row)   #!!! remove this before experiment launch
+
+
+#if st.session_state.click != 'button not cliked':
+#    new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
+#    st.dataframe(new_row)
+
+if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
+    new_row = pd.DataFrame([button_cliked], columns=['button']) 
+
+
+st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
