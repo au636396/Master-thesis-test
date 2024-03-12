@@ -138,7 +138,6 @@ st.write(st.session_state['click']) #for tesing can be removed
 if st.session_state.click.startswith('afvis') or st.session_state.click.startswith('accepter'):
     new_row = pd.DataFrame([[st.session_state.click]], columns=['button']) 
     st.dataframe(new_row)
-else:
 #st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
