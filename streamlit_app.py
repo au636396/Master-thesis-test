@@ -103,11 +103,11 @@ col1, col2, col3 = st.columns([1,4,1])
 
 st.write(st.session_state['click']) #for tesing can be removed 
 
-with col2:
-            with st.container():
-                st.image('cookies_text.png')
-                button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
-                st.session_state['click'] = button_cliked
+#with col2:
+#            with st.container():
+#                st.image('cookies_text.png')
+#                button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
+#                st.session_state['click'] = button_cliked
 
 # makeing the buttons show up depending on condition
 #if st.session_state.condition == 1:  # con 1
