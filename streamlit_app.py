@@ -13,15 +13,17 @@ from st_btn_group import st_btn_group
 # 4 = Rigth, diffrent 
 
 ## setting the page wiht to be smaller (makes the white box smalller) and removing the top menu bar
+st.set_page_config(initial_sidebar_state="collapsed")
+
 css='''
 <style>
     section.main > div {max-width:38rem}
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
-    .css-1rs6os {visibility: hidden;}
-    .css-17ziqus {visibility: hidden;}
-    stSidebarContent {visibility: hidden;}
+    [data-testid="collapsedControl"] {
+        display: none
+    }
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
