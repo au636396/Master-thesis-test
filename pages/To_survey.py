@@ -16,5 +16,5 @@ css='''
 st.markdown(css, unsafe_allow_html=True)
 
 #The visuals
-st.text("Thanks for at du ville svare på mit spørgeskema.   /nClick på knappen under for at gå til spørgeskemaet")
+st.text("Thanks for at du ville svare på mit spørgeskema.  \n Click på knappen under for at gå til spørgeskemaet")
 st.link_button("Til spørgeskema", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
