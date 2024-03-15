@@ -21,6 +21,7 @@ css='''
     header {visibility: hidden;}
     .css-1rs6os {visibility: hidden;}
     .css-17ziqus {visibility: hidden;}
+    stSidebarContent {visibility: hidden;}
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
