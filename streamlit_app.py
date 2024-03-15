@@ -19,6 +19,15 @@ css='''
 '''
 st.markdown(css, unsafe_allow_html=True)
 
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
+
+
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
