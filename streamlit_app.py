@@ -24,6 +24,9 @@ css='''
     [data-testid="collapsedControl"] {
         display: none
     }
+    [data-testid="stVerticalBlock"] {{
+        background-color: #FFFFFF;
+    }}
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
@@ -64,7 +67,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('generic_website.png')
 
-#-------------------deifnng the way the buttons and container looks ---------------------------------------------------
+#------------------- ---------------------------------------------------
 #con1
 buttons1 = [
     {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
@@ -96,17 +99,17 @@ buttons4 = [
 
 
 #making the container baggruound white
-css_body_container = f'''
-<style>
-    [data-testid="stVerticalBlock"] {{
-    background-color: #FFFFFF;
-    }}
-</style>
-'''
-st.markdown(css_body_container,unsafe_allow_html=True)
+#css_body_container = f'''
+#<style>
+#    [data-testid="stVerticalBlock"] {{
+#    background-color: #FFFFFF;
+#    }}
+#</style>
+#'''
+#st.markdown(css_body_container,unsafe_allow_html=True)
 
 
-#-------------------------------------------------- making the text and buttons apier ------------------------
+#-------------------------------------  MAKING THE TEXT AND BUTTONS DISSAPIER ------------------------
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,12,1])
 
@@ -140,7 +143,7 @@ else:
     st.write("An error has occurred, please reload the page!")
 
 
-#--------------- traking the button click ---------------
+#--------------- TRACKING THE BUTTON INPUT ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
@@ -155,10 +158,9 @@ with col2:
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
-### this needs to be fixed
-#show button with link to surevery only after a button has been cliked 
+#----------------- SWITH TO NEW PAGE-------------------------------------
+#Goes to survey page once its has been cliked 
 with col2:
     if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         st.switch_page("pages/To_survey.py")
-    
-    #st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
+
