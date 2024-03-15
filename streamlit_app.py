@@ -7,15 +7,11 @@ import base64
 from st_btn_group import st_btn_group
 import time
 
-### condition number meaning:
-# 1 = Left, same   
-# 2 = Left, diffrent
-# 3 = Right, same
-# 4 = Rigth, diffrent 
-
-## setting the page wiht to be smaller (makes the white box smalller) and removing the top menu bar
+#--------------------------------- DEFINING THE GENERAL WAY THE PAGE LOOKS---------------------------------------------
+#stat with sidebar corlapsed
 st.set_page_config(initial_sidebar_state="collapsed")
 
+## setting the page wiht to be smaller (makes the white box smalller), removing the top menu bar and the sideabr button
 css='''
 <style>
     section.main > div {max-width:38rem}
@@ -29,24 +25,10 @@ css='''
 '''
 st.markdown(css, unsafe_allow_html=True)
 
-#if you want ot remove the navigation on the side put thsi in css above:
-#            .css-1rs6os {visibility: hidden;}
-#            .css-17ziqus {visibility: hidden;}
-
-
-
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
 
-#------------------------ Saving the data --------------
-gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
-
-#-------------------------- active one you want to "turn on" tracing 
-#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
-
-#---------------------------- adding baground pictue--------------------------------------------------------
 # function that add a bacgournd picture 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -65,7 +47,12 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('generic_website.png')
 
-#------------------- ---------------------------------------------------
+#----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
+gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
+olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+
+#------------------------- DEFINING THE WAY THE BUTTONS LOOK AND THE OUTPUT TEXT THEY GIVE --------------------------------
 #con1
 buttons1 = [
     {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
@@ -95,7 +82,6 @@ buttons4 = [
     },
 ]
 
-
 #making the container baggruound white
 css_body_container = f'''
 <style>
@@ -107,7 +93,7 @@ css_body_container = f'''
 st.markdown(css_body_container,unsafe_allow_html=True)
 
 
-#-------------------------------------  MAKING THE TEXT AND BUTTONS DISSAPIER ------------------------
+#-----------------------------------------  MAKING THE TEXT AND BUTTONS DISSAPIER ---------------------------------------------
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,12,1])
 
@@ -141,9 +127,8 @@ else:
     st.write("An error has occurred, please reload the page!")
 
 
-#--------------- TRACKING THE BUTTON INPUT ---------------
+#---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
@@ -152,9 +137,8 @@ with col2:
     try: st.dataframe(new_row) 
     except NameError: print("not yet")
 
-#st.dataframe(new_row)   #!!! remove this before experiment launch
-#newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
-#gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
+newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
+gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
 #----------------- SWITH TO NEW PAGE-------------------------------------
 #Goes to survey page once its has been cliked 
