@@ -16,9 +16,11 @@ css='''
 st.markdown(css, unsafe_allow_html=True)
 
 #The visuals
-text = '''###Tak for at du ville svare på mit spørgeskema.
-###Click på knappen under for at gå til spørgeskemaet.
-'''
-st.markdown(text)
+#text = '''###Tak for at du ville svare på mit spørgeskema.
+####Click på knappen under for at gå til spørgeskemaet.
+#'''
+
+st.markdown("###Tak for at du ville svare på mit spørgeskema.")
+st.markdown("###Click på knappen under for at gå til spørgeskemaet.")
 
 st.link_button("Til spørgeskema", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
