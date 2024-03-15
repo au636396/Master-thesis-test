@@ -15,18 +15,22 @@ from st_btn_group import st_btn_group
 css='''
 <style>
     section.main > div {max-width:38rem}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
 </style>
+
 '''
 st.markdown(css, unsafe_allow_html=True)
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+#hide_st_style = """
+#            <style>
+#            #MainMenu {visibility: hidden;}
+#            footer {visibility: hidden;}
+#            header {visibility: hidden;}
+#            </style>
+#            """
+#st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 # initializing secction with a random number, used for picking a condition
