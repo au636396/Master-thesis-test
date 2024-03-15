@@ -5,6 +5,7 @@ import gspread
 import gspread_dataframe as gd
 import base64
 from st_btn_group import st_btn_group
+import time
 
 ### condition number meaning:
 # 1 = Left, same   
@@ -159,5 +160,6 @@ with col2:
 #Goes to survey page once its has been cliked 
 with col2:
     if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-        st.switch_page("pages/To_survey.py")
+          time.sleep(2)
+          st.switch_page("pages/To_survey.py")
 
