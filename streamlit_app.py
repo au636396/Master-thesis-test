@@ -14,7 +14,7 @@ from st_btn_group import st_btn_group
 
 css='''
 <style>
-    section.main > div {max-width:40rem}
+    section.main > div {max-width:38rem}
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
