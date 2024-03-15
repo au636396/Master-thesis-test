@@ -115,22 +115,25 @@ else:
 
 #--------------- traking the button click ---------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-if button_cliked == 'afvis1':
-        new_row = pd.DataFrame(["afvis1"], columns=['button']) 
-elif button_cliked == 'accepter1':
-        new_row = pd.DataFrame(["accepter1"], columns=['button']) 
-elif button_cliked == 'afvis2':
-        new_row = pd.DataFrame(["afvis2"], columns=['button']) 
-elif button_cliked == 'accepter2':
-        new_row = pd.DataFrame(["accepter2"], columns=['button']) 
-elif button_cliked == 'afvis3':
-        new_row = pd.DataFrame(["afvis3"], columns=['button']) 
-elif button_cliked == 'accepter3':
-        new_row = pd.DataFrame(["accepter3"], columns=['button']) 
-elif button_cliked == 'afvis4':
-        new_row = pd.DataFrame(["afvis4"], columns=['button']) 
-elif button_cliked == 'accepter4':
-        new_row = pd.DataFrame(["accepter4"], columns=['button']) 
+#if button_cliked == 'afvis1':
+#        new_row = pd.DataFrame(["afvis1"], columns=['button']) 
+#elif button_cliked == 'accepter1':
+#        new_row = pd.DataFrame(["accepter1"], columns=['button']) 
+#elif button_cliked == 'afvis2':
+#        new_row = pd.DataFrame(["afvis2"], columns=['button']) 
+#elif button_cliked == 'accepter2':
+#        new_row = pd.DataFrame(["accepter2"], columns=['button']) 
+#elif button_cliked == 'afvis3':
+#        new_row = pd.DataFrame(["afvis3"], columns=['button']) 
+#elif button_cliked == 'accepter3':
+#        new_row = pd.DataFrame(["accepter3"], columns=['button']) 
+#elif button_cliked == 'afvis4':
+#        new_row = pd.DataFrame(["afvis4"], columns=['button']) 
+#elif button_cliked == 'accepter4':
+#        new_row = pd.DataFrame(["accepter4"], columns=['button']) 
+
+if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+        new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
 #show data frame if it exxists if not print not yet
 try: st.dataframe(new_row) 
