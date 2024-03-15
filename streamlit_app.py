@@ -14,7 +14,7 @@ from st_btn_group import st_btn_group
 
 css='''
 <style>
-    section.main > div {max-width:60rem}
+    section.main > div {max-width:40rem}
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
@@ -93,7 +93,7 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 
 #-------------------------------------------------- making the text and buttons apier ------------------------
 # defining the colums the buttons and text will apier in
-col1, col2, col3 = st.columns([1,4,1])
+col1, col2, col3 = st.columns([1,5,1])
 
 imange = 'cookies_text.png'
 # makeing the buttons show up depending on condition
