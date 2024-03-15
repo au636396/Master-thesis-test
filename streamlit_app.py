@@ -24,9 +24,6 @@ css='''
     [data-testid="collapsedControl"] {
         display: none
     }
-    [data-testid="stVerticalBlock"] {{
-        background-color: #FFFFFF;
-    }}
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
@@ -99,14 +96,14 @@ buttons4 = [
 
 
 #making the container baggruound white
-#css_body_container = f'''
-#<style>
-#    [data-testid="stVerticalBlock"] {{
-#    background-color: #FFFFFF;
-#    }}
-#</style>
-#'''
-#st.markdown(css_body_container,unsafe_allow_html=True)
+css_body_container = f'''
+<style>
+    [data-testid="stVerticalBlock"] {{
+    background-color: #FFFFFF;
+    }}
+</style>
+'''
+st.markdown(css_body_container,unsafe_allow_html=True)
 
 
 #-------------------------------------  MAKING THE TEXT AND BUTTONS DISSAPIER ------------------------
