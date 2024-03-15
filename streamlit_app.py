@@ -12,6 +12,13 @@ from st_btn_group import st_btn_group
 # 3 = Right, same
 # 4 = Rigth, diffrent 
 
+css='''
+<style>
+    section.main > div {max-width:75rem}
+</style>
+'''
+st.markdown(css, unsafe_allow_html=True)
+
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
     st.session_state["condition"] = random.randint(1,4)
