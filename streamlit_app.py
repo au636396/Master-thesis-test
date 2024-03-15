@@ -154,6 +154,6 @@ with col2:
 #show button with link to surevery only after a button has been cliked 
 with col2:
     if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-        st.switch_page("To_survey.py")
+        st.switch_page("pages/To_survey.py")
     
     #st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
