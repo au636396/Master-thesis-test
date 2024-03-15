@@ -12,6 +12,7 @@ from st_btn_group import st_btn_group
 # 3 = Right, same
 # 4 = Rigth, diffrent 
 
+## setting the page wiht to be smaller (makes the white box smalller) and removing the top menu bar
 css='''
 <style>
     section.main > div {max-width:38rem}
@@ -22,16 +23,6 @@ css='''
 
 '''
 st.markdown(css, unsafe_allow_html=True)
-
-#hide_st_style = """
-#            <style>
-#            #MainMenu {visibility: hidden;}
-#            footer {visibility: hidden;}
-#            header {visibility: hidden;}
-#            </style>
-#            """
-#st.markdown(hide_st_style, unsafe_allow_html=True)
-
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
