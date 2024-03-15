@@ -16,7 +16,7 @@ css='''
 st.markdown(css, unsafe_allow_html=True)
 
 #The visuals
-col1, col2, col3 = st.columns([1,1,1])
+col1, col2, col3 = st.columns([1,3,1])
 with col2:
     st.write("##### "+"Tak for at du ville svare på mit spørgeskema.")
     st.write("##### "+"Click på knappen under for at gå til spørgeskemaet.")
