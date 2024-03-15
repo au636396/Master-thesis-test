@@ -20,9 +20,14 @@ css='''
     footer {visibility: hidden;}
     header {visibility: hidden;}
 </style>
-
 '''
 st.markdown(css, unsafe_allow_html=True)
+
+#if you want ot remove the navigation on the side put thsi in css above:
+#            .css-1rs6os {visibility: hidden;}
+#            .css-17ziqus {visibility: hidden;}
+
+
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
