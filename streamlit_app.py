@@ -93,27 +93,27 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 
 #-------------------------------------------------- making the text and buttons apier ------------------------
 # defining the colums the buttons and text will apier in
-#col1, col2, col3 = st.columns([1,7,1])
+col1, col2, col3 = st.columns([1,12,1])
 
 imange = 'cookies_text.png'
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
-   # with col2:
+    with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 2:  # con 2
-   # with col2:
+    with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 3:  # con 3
-  #  with col2:
+    with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 4:  # con 4
-    #with col2:
+    with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
@@ -128,9 +128,9 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
         new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
 #show data frame if it exists if not print not yet
-#with col2:
-try: st.dataframe(new_row) 
-except NameError: print("not yet")
+with col2:
+    try: st.dataframe(new_row) 
+    except NameError: print("not yet")
 
 #st.dataframe(new_row)   #!!! remove this before experiment launch
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
@@ -138,6 +138,6 @@ except NameError: print("not yet")
 
 ### this needs to be fixed
 #show button with link to surevery only after a button has been cliked 
-#with col2:
-if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-    st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
+with col2:
+    if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+        st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
