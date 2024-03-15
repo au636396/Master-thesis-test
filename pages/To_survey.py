@@ -21,7 +21,7 @@ st.subheader("Click på knappen under for at gå til spørgeskemaet.")
 
 text2 = "Click på knappen under for at gå til spørgeskemaet."
 
-St.write("# "text2)
+St.write("# "+"Click på knappen under for at gå til spørgeskemaet.")
 #st.write("# "+str(st.session_state["number_input_1"]))
 
          
