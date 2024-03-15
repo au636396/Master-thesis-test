@@ -88,26 +88,27 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
 
+imange = 'cookies_text.png'
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
             with st.container():
-                st.image('cookies_text.png')
+                st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 2:  # con 2
     with col2:
             with st.container():
-                st.image('cookies_text.png')
+                st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
-                st.image('cookies_text.png')
+                st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
-                st.image('cookies_text.png')
+                st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
 else:
     st.write("An error has occurred, please reload the page!")
@@ -119,7 +120,7 @@ else:
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
-#show data frame if it exxists if not print not yet
+#show data frame if it exists if not print not yet
 try: st.dataframe(new_row) 
 except NameError: print("not yet")
 
