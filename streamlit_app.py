@@ -142,5 +142,5 @@ except NameError: print("not yet")
 
 ### this needs to be fixed
 #show button with link to surevery only after a button has been cliked 
-if button_cliked == 'afvis1' or 'accepter1' or 'afvis2' or 'accepter2' or 'afvis3' or 'accepter3' or 'afvis4' or 'accepter4':
+if button_cliked == 'afvis1' or == 'accepter1' or == 'afvis2' or == 'accepter2' or == 'afvis3' or == 'accepter3' or == 'afvis4' or == 'accepter4':
         st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
