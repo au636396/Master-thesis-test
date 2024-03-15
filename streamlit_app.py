@@ -102,25 +102,25 @@ if st.session_state.condition == 1:  # con 1
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
-                st.text("    \n  ")
+                st.text("Hey there, I am Line 1 of text!  \nHey there, I am Line 2 of text.")
 elif st.session_state.condition == 2:  # con 2
     with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
-                st.text("    \n  ")
+                st.text("Hey there, I am Line 1 of text!  \nHey there, I am Line 2 of text.")
 elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-                st.text("    \n  ")
+                st.text(""Hey there, I am Line 1 of text!  \nHey there, I am Line 2 of text.")
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
-                st.text("    \n  ")
+                st.text("Hey there, I am Line 1 of text!  \nHey there, I am Line 2 of text.")
 else:
     st.write("An error has occurred, please reload the page!")
 
