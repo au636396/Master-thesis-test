@@ -116,9 +116,9 @@ else:
 # take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 
 if button_cliked == 'afvis1' or button_cliked == 'accepter1'
-or button_cliked == 'afvis2' or button_cliked == 'accepter2' 
-or button_cliked == 'afvis3' or button_cliked == 'accepter3'
-or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+    or button_cliked == 'afvis2' or button_cliked == 'accepter2' 
+    or button_cliked == 'afvis3' or button_cliked == 'accepter3'
+    or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
 #show data frame if it exxists if not print not yet
