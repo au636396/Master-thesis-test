@@ -16,8 +16,8 @@ css='''
 st.markdown(css, unsafe_allow_html=True)
 
 #The visuals
-text = '''Tak for at du ville svare på mit spørgeskema.
-Click på knappen under for at gå til spørgeskemaet.
+text = '''####Tak for at du ville svare på mit spørgeskema.
+####Click på knappen under for at gå til spørgeskemaet.
 '''
 st.markdown(text)
 
