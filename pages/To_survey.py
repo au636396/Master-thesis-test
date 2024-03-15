@@ -19,6 +19,6 @@ st.markdown(css, unsafe_allow_html=True)
 st.subheader('Tak for at du ville svare på mit spørgeskema.')
 st.subheader("Click på knappen under for at gå til spørgeskemaet.")
 
-st.markdown("#Click på knappen under for at gå til spørgeskemaet.")
+st.write("#Click på knappen under for at gå til spørgeskemaet.")
 
 st.link_button("Til spørgeskema", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
