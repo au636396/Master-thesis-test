@@ -114,7 +114,7 @@ elif st.session_state.condition == 3:  # con 3
             with st.container():
                 st.image(imange)
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-                st.text(""Hey there, I am Line 1 of text!  \nHey there, I am Line 2 of text.")
+                st.text("Hey there, I am Line 1 of text!  \nHey there, I am Line 2 of text.")
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
