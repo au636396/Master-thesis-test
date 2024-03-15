@@ -21,6 +21,8 @@ st.subheader("Click på knappen under for at gå til spørgeskemaet.")
 
 text2 = "Click på knappen under for at gå til spørgeskemaet."
 
-St.write(“# "+text2)
+St.write("# "+text2)
+#st.write("# "+str(st.session_state["number_input_1"]))
 
+         
 st.link_button("Til spørgeskema", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
