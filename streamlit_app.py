@@ -18,11 +18,12 @@ if "condition" not in st.session_state:
 
 #------------------------ Saving the data --------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
+
 #-------------------------- active one you want to "turn on" tracing 
 #olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
 #pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 
-#---------------------------- Adding baground pictue--------------------------------------------------------
+#---------------------------- adding baground pictue--------------------------------------------------------
 # function that add a bacgournd picture 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -83,7 +84,7 @@ css_body_container = f'''
 st.markdown(css_body_container,unsafe_allow_html=True)
 
 
-#-------------------------------------------------- making the text and buttons apier -------------------------------------
+#-------------------------------------------------- making the text and buttons apier ------------------------
 # defining the colums the buttons and text will apier in
 col1, col2, col3 = st.columns([1,4,1])
 
@@ -113,12 +114,9 @@ else:
 
 
 #--------------- traking the button click ---------------
-# take the button input and puts it in the new row dataframe, only after a buttons has been pressed
+## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 
-if button_cliked == 'afvis1' or button_cliked == 'accepter1'
-    or button_cliked == 'afvis2' or button_cliked == 'accepter2' 
-    or button_cliked == 'afvis3' or button_cliked == 'accepter3'
-    or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         new_row = pd.DataFrame([button_cliked], columns=['button']) 
 
 #show data frame if it exxists if not print not yet
@@ -129,10 +127,7 @@ except NameError: print("not yet")
 #newdata = pd.concat([pdolddata, new_row])    # adding the new row from above at the end of the data
 #gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
-
+### this needs to be fixed
 #show button with link to surevery only after a button has been cliked 
-if button_cliked == 'afvis1' or button_cliked == 'accepter1' 
-or button_cliked == 'afvis2' or button_cliked == 'accepter2' 
-or button_cliked == 'afvis3' or button_cliked == 'accepter3' 
-or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         st.link_button("Go to survey", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
