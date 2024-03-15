@@ -13,7 +13,7 @@ from st_btn_group import st_btn_group
 # 4 = Rigth, diffrent 
 
 ## setting the page wiht to be smaller (makes the white box smalller) and removing the top menu bar
-#st.set_page_config(initial_sidebar_state="collapsed")
+st.set_page_config(initial_sidebar_state="collapsed")
 
 css='''
 <style>
