@@ -93,8 +93,8 @@ css_body_container = f'''
 st.markdown(css_body_container,unsafe_allow_html=True)
 
 
-#-----------------------------------------  MAKING THE TEXT AND BUTTONS DISSAPIER ---------------------------------------------
-# defining the colums the buttons and text will apier in
+#-----------------------------------------  MAKING THE TEXT AND BUTTONS APPEAR  ---------------------------------------------
+# defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
 
 imange = 'cookies_text.png'
@@ -130,23 +130,14 @@ else:
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-        new_row = pd.DataFrame([button_cliked], columns=['button'])
+        new_row = pd.DataFrame([button_cliked], columns=['button'])   #making the new dataframe
         newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
         gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
-
-#show data frame if it exists if not print not yet REMOVE BEFORE LAUNCH
-with col2:
-    try: st.dataframe(new_row) 
-    except NameError: print("not yet")
-        
-# adding the new row from above at the end of the data
-#newdata = pd.concat([pdolddata, new_row]) 
-#gd.set_with_dataframe(olddata, newdata)    #this should ad the new data to the gsheet
 
 #----------------- SWITH TO NEW PAGE-------------------------------------
 #Goes to survey page once its has been cliked 
 with col2:
     if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-          time.sleep(2)
+          time.sleep(1)
           st.switch_page("pages/To_survey.py")
 
