@@ -18,7 +18,7 @@ st.markdown(css, unsafe_allow_html=True)
 #The visuals
 col1, col2, col3 = st.columns([1,3,1])
 with col2:
-    st.write("##### "+"Tak for at du ville svare på mit spørgeskema.")
-    st.write("##### "+"Click på knappen under for at gå til spørgeskemaet.")
+    st.write("Tak for at du kiggede på min hjemmeside.  I mit speciale undersøger jeg designet af cookie pop-ups på hjemmesider og hvordan de påvirker adfærd.")
+    st.write("Jeg vil gerne stille dig nogle spørgsmål omkring dine tanker om cookie pop-ups og databeskyttelse. Hvis du gerne vil hjælpe mig med det på klik her:")
     st.write()
     st.link_button("**Til spørgeskema**", "https://survey.au.dk/LinkCollector?key=VC8ZRNUQUN16")
