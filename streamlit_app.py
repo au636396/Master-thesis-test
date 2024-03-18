@@ -113,8 +113,9 @@ if st.session_state.condition == 1:  # con 1
                 st.write(text1)
                 st.write("- Funktionalitet")
                 st.write("- Statistik")
-                st.write(" -Marketing")
+                st.write("- Marketing")
                 st.write(text1)
+                st.write()
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
 elif st.session_state.condition == 2:  # con 2
