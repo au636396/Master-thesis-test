@@ -92,23 +92,18 @@ css_body_container = f'''
 '''
 st.markdown(css_body_container,unsafe_allow_html=True)
 
+#-----------------------------------------  MAKING THE TEXT AND BUTTONS APPEAR  ---------------------------------------------
+#text to apir in banner
 text1 = "Vi og vores samarbejdspartnere bruger teknologier, herunder cookies, til at indsamle oplysninger om dig til forskellige formål, herunder:"
 text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse formål. Du kan også vælge at tilkendegive, hvilke formål du vil give samtykke til ved at klike her. Du kan til enhver tid trække dit samtykke tilbage."
 
-
-
-
-
-#-----------------------------------------  MAKING THE TEXT AND BUTTONS APPEAR  ---------------------------------------------
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
 
-imange = 'cookies_text.png'
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
             with st.container():
-                #st.image(imange)
                 st.write("### "+"Denne hjemmeside bruger cookies.")
                 st.write(text1)
                 st.write("- Funktionalitet")
@@ -121,19 +116,37 @@ if st.session_state.condition == 1:  # con 1
 elif st.session_state.condition == 2:  # con 2
     with col2:
             with st.container():
-                st.image(imange)
+                st.write("### "+"Denne hjemmeside bruger cookies.")
+                st.write(text1)
+                st.write("- Funktionalitet")
+                st.write("- Statistik")
+                st.write("- Marketing")
+                st.write(text1)
+                st.write("---")
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
 elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
-                st.image(imange)
+                st.write("### "+"Denne hjemmeside bruger cookies.")
+                st.write(text1)
+                st.write("- Funktionalitet")
+                st.write("- Statistik")
+                st.write("- Marketing")
+                st.write(text1)
+                st.write("---")
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
-                st.image(imange)
+                st.write("### "+"Denne hjemmeside bruger cookies.")
+                st.write(text1)
+                st.write("- Funktionalitet")
+                st.write("- Statistik")
+                st.write("- Marketing")
+                st.write(text1)
+                st.write("---")
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
 else:
