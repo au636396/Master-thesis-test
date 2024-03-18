@@ -99,7 +99,6 @@ text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse form
 
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
-st.write("test")
 
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
