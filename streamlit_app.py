@@ -89,9 +89,9 @@ buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "styl
 
 xcol1, xcol2, xcol3, xcol4 = st.columns([2,1,1,2])
 with xcol2:
-    button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='mini', align ='center')
+    button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='mini', align ='center', key="afvis8")
 with xcol3:
-    button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center')
+    button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center', key="accepter8")
 
 
 #making the container baggruound white
