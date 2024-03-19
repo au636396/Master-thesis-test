@@ -90,7 +90,7 @@ buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "styl
 xcol1, xcol2, xcol3, xcol4 = st.columns([2,1,1,2])
 with xcol2:
     button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='mini', align ='center')
-with xcol2:
+with xcol3:
     button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center')
 
 
