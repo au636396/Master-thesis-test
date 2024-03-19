@@ -100,7 +100,7 @@ with xcol2:
     button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='compact', align ='center', key="afvis8")
 with xcol3:
     #st.markdown('##')
-    s.write(" ")
+    st.write(" ")
     button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center', key="accepter8")
 
 
