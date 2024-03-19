@@ -83,36 +83,15 @@ buttons4 = [
     },
 ]
 
-## DIFF SIZE
-#con1
-buttons5 = [
-    {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
-    },
-    {"label": "  Afvis alle  ",  "value": "afvis1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
-    },
-]
-#con 2
-buttons6 = [
-    {"label": "Accepter alle", "value": "accepter2", "style": {"backgroundColor": "lightgreen", "color": "black", },
-    },
-    {"label": "  Afvis alle  ",  "value": "afvis2", "style": { "color": "black", },
-    },
-]
-#con 3
-buttons7 = [
-    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },
-    },
-    {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },
-    },
-]
-#con 4
-buttons8 = [
-    {"label": "  Afvis alle  ",  "value": "afvis4", "style": { "color": "black", },
-    },
-    {"label": "Accepter alle", "value": "accepter4", "style": {"backgroundColor": "lightgreen", "color": "black", },
-    },
-]
+#con 8
+buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
+buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": { "color": "black", },},]
 
+xcol1, xcol2, xcol3, xcol4 = st.columns([2,1,1,2])
+with xcol2:
+    button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='mini', align ='center')
+with xcol2:
+    button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center')
 
 
 #making the container baggruound white
@@ -132,7 +111,7 @@ text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse form
 
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
-xcol1, xcol2, xcol3, xcol4 = st.columns([2,1,1,2])
+
 
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
