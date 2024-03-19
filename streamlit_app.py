@@ -49,10 +49,11 @@ set_background('generic_website.png')
 
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
-#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 
 #------------------------- DEFINING THE WAY THE BUTTONS LOOK AND THE OUTPUT TEXT THEY GIVE --------------------------------
+## SAME SIZE
 #con1
 buttons1 = [
     {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
@@ -81,6 +82,38 @@ buttons4 = [
     {"label": "Accepter alle", "value": "accepter4", "style": {"backgroundColor": "lightgreen", "color": "black", },
     },
 ]
+
+## DIFF SIZE
+#con1
+buttons5 = [
+    {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
+    },
+    {"label": "  Afvis alle  ",  "value": "afvis1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
+    },
+]
+#con 2
+buttons6 = [
+    {"label": "Accepter alle", "value": "accepter2", "style": {"backgroundColor": "lightgreen", "color": "black", },
+    },
+    {"label": "  Afvis alle  ",  "value": "afvis2", "style": { "color": "black", },
+    },
+]
+#con 3
+buttons7 = [
+    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },
+    },
+    {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },
+    },
+]
+#con 4
+buttons8 = [
+    {"label": "  Afvis alle  ",  "value": "afvis4", "style": { "color": "black", },
+    },
+    {"label": "Accepter alle", "value": "accepter4", "style": {"backgroundColor": "lightgreen", "color": "black", },
+    },
+]
+
+
 
 #making the container baggruound white
 css_body_container = f'''
@@ -156,9 +189,9 @@ else:
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 #if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-#        new_row = pd.DataFrame([button_cliked], columns=['button'])   #making the new dataframe
-#        newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
-#        gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
+        new_row = pd.DataFrame([button_cliked], columns=['button'])   #making the new dataframe
+        newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
+        gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
 
 #----------------- SWITH TO NEW PAGE-------------------------------------
 #Goes to survey page once its has been cliked 
