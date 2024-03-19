@@ -70,7 +70,7 @@ buttons2 = [
 ]
 #con 3
 buttons3 = [
-    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "white", "textHighlight": "red", "color": "black", },
+    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },
     },
     {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },
     },
