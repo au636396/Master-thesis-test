@@ -132,6 +132,7 @@ text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse form
 
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
+xcol1, xcol2, xcol3, xcol4 = st.columns([2,1,1,2])
 
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
@@ -142,7 +143,7 @@ if st.session_state.condition == 1:  # con 1
                 st.write("- Funktionalitet")
                 st.write("- Statistik")
                 st.write("- Marketing")
-                st.write(text1)
+                st.write(text2)
                 st.write("---")
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
@@ -154,7 +155,7 @@ elif st.session_state.condition == 2:  # con 2
                 st.write("- Funktionalitet")
                 st.write("- Statistik")
                 st.write("- Marketing")
-                st.write(text1)
+                st.write(text2)
                 st.write("---")
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
@@ -166,7 +167,7 @@ elif st.session_state.condition == 3:  # con 3
                 st.write("- Funktionalitet")
                 st.write("- Statistik")
                 st.write("- Marketing")
-                st.write(text1)
+                st.write(text2)
                 st.write("---")
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
@@ -178,7 +179,7 @@ elif st.session_state.condition == 4:  # con 4
                 st.write("- Funktionalitet")
                 st.write("- Statistik")
                 st.write("- Marketing")
-                st.write(text1)
+                st.write(text2)
                 st.write("---")
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
                 st.markdown('##')
