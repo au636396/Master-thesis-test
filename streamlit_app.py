@@ -58,7 +58,7 @@ pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe
 buttons1 = [
     {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
     },
-    {"label": "  Afvis alle  ",  "value": "afvis1", "style": {"backgroundColor": "snow",  "color": "black", },
+    {"label": "  Afvis alle  ",  "value": "afvis1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
     },
 ]
 #con 2
@@ -70,7 +70,7 @@ buttons2 = [
 ]
 #con 3
 buttons3 = [
-    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },
+    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "snow", "color": "black", },
     },
     {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },
     },
