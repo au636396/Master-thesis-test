@@ -164,6 +164,6 @@ else:
 #Goes to survey page once its has been cliked 
 with col2:
     if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-          time.sleep(0.3)
+          time.sleep(0.1)
           st.switch_page("pages/To_survey.py")
 
