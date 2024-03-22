@@ -91,7 +91,7 @@ buttons4 = [
 
 
 #con 8
-"""
+buttonof diffsize = """
 buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
 buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
 
@@ -130,13 +130,15 @@ text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse form
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
 
-st.write("### "+"Denne hjemmeside bruger cookies.")
-st.write(text1)
-st.write("- Funktionalitet")
-st.write("- Statistik")
-st.write("- Marketing")
-st.write(text2)
-st.write("---")
+with col2: 
+    st.write("### "+"Denne hjemmeside bruger cookies.")
+    st.write(text1)
+    st.write("- Funktionalitet")
+    st.write("- Statistik")
+    st.write("- Marketing")
+    st.write(text2)
+    st.write("---")
+
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
