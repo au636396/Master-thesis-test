@@ -91,18 +91,31 @@ buttons4 = [
 
 
 #con 8
-buttonofdiffsize = """
+buttonofdiffsizecodee = """
 buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
 buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
 
 xcol1, xcol2, xcol3, xcol4 = st.columns([1,6,6,1])
-with xcol2:
-    st.markdown('###')
-    button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='compact', align ='center', key="afvis8")
-with xcol3:
-    #st.markdown('##')
-    st.write(" ")
+
+#con7
+elif st.session_state.condition == 7: 
+    with xcol2:
+        st.markdown('###')
+        button_cliked = st_btn_group(buttons=buttons71, gap_between_buttons = 45, size='compact', align ='center', key="afvis7")
+    with xcol3:
+        st.write(" ")
+    button_cliked = st_btn_group(buttons=buttons72, gap_between_buttons = 45, size='default', align ='center', key="accepter7")
+#con8
+elif st.session_state.condition == 8: 
+    with xcol2:
+        st.markdown('###')
+        button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='compact', align ='center', key="afvis8")
+    with xcol3:
+        st.write(" ")
     button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center', key="accepter8")
+
+
+    
 """
 
 
@@ -143,20 +156,16 @@ with col2:
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
-            #with st.container():
-                button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
+            button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 2:  # con 2
     with col2:
-            #with st.container():
-                button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
+            button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 3:  # con 3
     with col2:
-            #with st.container():
-                button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
+            button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 4:  # con 4
     with col2:
-            #with st.container():
-                button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
+            button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
 else:
     st.write("An error has occurred, please reload the page!")
 
