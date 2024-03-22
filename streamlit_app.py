@@ -152,7 +152,7 @@ buttons72 = [{"label": "  Accepter alle  ",  "value": "accepter7", "styl
 buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
 buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
 """
-buttonsif"""
+buttonsif = """
 xcol1, xcol2, xcol3, xcol4 = st.columns([1,6,6,1])
 
 #con5
