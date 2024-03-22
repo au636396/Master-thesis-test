@@ -91,7 +91,7 @@ buttons4 = [
 
 
 #con 8
-buttonof diffsize = """
+buttonofdiffsize = """
 buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
 buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
 
