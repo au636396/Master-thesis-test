@@ -130,6 +130,7 @@ text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse form
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
 
+#text
 with col2: 
     st.write("### "+"Denne hjemmeside bruger cookies.")
     st.write(text1)
@@ -142,19 +143,19 @@ with col2:
 # makeing the buttons show up depending on condition
 if st.session_state.condition == 1:  # con 1
     with col2:
-            with st.container():
+            #with st.container():
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 2:  # con 2
     with col2:
-            with st.container():
+            #with st.container():
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 3:  # con 3
     with col2:
-            with st.container():
+            #with st.container():
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
 elif st.session_state.condition == 4:  # con 4
     with col2:
-            with st.container():
+            #with st.container():
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
 else:
     st.write("An error has occurred, please reload the page!")
