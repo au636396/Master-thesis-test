@@ -143,55 +143,24 @@ with col2:
 if st.session_state.condition == 1:  # con 1
     with col2:
             with st.container():
-                #st.write("### "+"Denne hjemmeside bruger cookies.")
-                #st.write(text1)
-                #st.write("- Funktionalitet")
-                #st.write("- Statistik")
-                #st.write("- Marketing")
-                #st.write(text2)
-                #st.write("---")
                 button_cliked = st_btn_group(buttons=buttons1, gap_between_buttons = 45, size='default', align ='center')
-                st.markdown('##')
 elif st.session_state.condition == 2:  # con 2
     with col2:
             with st.container():
-                #st.write("### "+"Denne hjemmeside bruger cookies.")
-                #st.write(text1)
-                #st.write("- Funktionalitet")
-                #st.write("- Statistik")
-                #st.write("- Marketing")
-                #st.write(text2)
-                #st.write("---")
                 button_cliked = st_btn_group(buttons=buttons2, gap_between_buttons = 45, size='default', align ='center')
-                st.markdown('##')
 elif st.session_state.condition == 3:  # con 3
     with col2:
             with st.container():
-                #st.write("### "+"Denne hjemmeside bruger cookies.")
-                #st.write(text1)
-                #st.write("- Funktionalitet")
-                #st.write("- Statistik")
-                #st.write("- Marketing")
-                #st.write(text2)
-                #st.write("---")
                 button_cliked = st_btn_group(buttons=buttons3, gap_between_buttons = 45, size='default', align ='center')
-                st.markdown('##')
 elif st.session_state.condition == 4:  # con 4
     with col2:
             with st.container():
-                #st.write("### "+"Denne hjemmeside bruger cookies.")
-                #st.write(text1)
-                #st.write("- Funktionalitet")
-                #st.write("- Statistik")
-                #st.write("- Marketing")
-                #st.write(text2)
-                #st.write("---")
                 button_cliked = st_btn_group(buttons=buttons4, gap_between_buttons = 45, size='default', align ='center')
-                st.markdown('##')
 else:
     st.write("An error has occurred, please reload the page!")
 
-
+with col2: 
+    st.markdown('##')
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 #if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
