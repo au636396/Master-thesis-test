@@ -56,74 +56,24 @@ pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe
 ## SAME SIZE
 #con1
 buttons1 = [
-    {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
-    },
-    {"label": "  Afvis alle  ",  "value": "afvis1", "style": {"backgroundColor": "lightgreen",  "color": "black", },
-    },
+    {"label": "Accepter alle", "value": "accepter1", "style": {"backgroundColor": "lightgreen",  "color": "black", },},
+    {"label": "  Afvis alle  ",  "value": "afvis1", "style": {"backgroundColor": "lightgreen",  "color": "black", },},
 ]
 #con 2
 buttons2 = [
-    {"label": "Accepter alle", "value": "accepter2", "style": {"backgroundColor": "lightgreen", "color": "black", },
-    },
-    {"label": "  Afvis alle  ",  "value": "afvis2", "style": { "color": "black", },
-    },
+    {"label": "Accepter alle", "value": "accepter2", "style": {"backgroundColor": "lightgreen", "color": "black", },},
+    {"label": "  Afvis alle  ",  "value": "afvis2", "style": { "color": "black", },},
 ]
 #con 3
 buttons3 = [
-    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },
-    },
-    {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },
-    },
+    {"label": "  Afvis alle  ",  "value": "afvis3", "style": { "backgroundColor": "lightgreen", "color": "black", },},
+    {"label": "Accepter alle", "value": "accepter3", "style": {"backgroundColor": "lightgreen", "color": "black", },},
 ]
 #con 4
 buttons4 = [
-    {"label": "  Afvis alle  ",  "value": "afvis4", "style": { "color": "black", },
-    },
-    {"label": "Accepter alle", "value": "accepter4", "style": {"backgroundColor": "lightgreen", "color": "black", },
-    },
+    {"label": "  Afvis alle  ",  "value": "afvis4", "style": { "color": "black", },},
+    {"label": "Accepter alle", "value": "accepter4", "style": {"backgroundColor": "lightgreen", "color": "black", },},
 ]
-
-
-
-
-
-
-
-
-#con 8
-buttonofdiffsizecodee = """
-buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
-buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
-
-xcol1, xcol2, xcol3, xcol4 = st.columns([1,6,6,1])
-
-#con7
-elif st.session_state.condition == 7: 
-    with xcol2:
-        st.markdown('###')
-        button_cliked = st_btn_group(buttons=buttons71, gap_between_buttons = 45, size='compact', align ='center', key="afvis7")
-    with xcol3:
-        st.write(" ")
-    button_cliked = st_btn_group(buttons=buttons72, gap_between_buttons = 45, size='default', align ='center', key="accepter7")
-#con8
-elif st.session_state.condition == 8: 
-    with xcol2:
-        st.markdown('###')
-        button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='compact', align ='center', key="afvis8")
-    with xcol3:
-        st.write(" ")
-    button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center', key="accepter8")
-
-
-    
-"""
-
-
-
-
-
-
-
 
 #making the container baggruound white
 css_body_container = f'''
@@ -184,3 +134,57 @@ with col2:
     if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
           st.switch_page("pages/To_survey.py")
 
+
+
+#---------------------------------------ADD IF YOU WANT MORE CONDITIONS--------------
+#con 8
+buttonofdiffsize = """
+#con 5
+buttons51 = [{"label": "  Afvis alle  ",  "value": "afvis5", "style": { "backgroundColor": "lightgreen", "color": "black", },},]
+buttons52 = [{"label": "  Accepter alle  ",  "value": "accepter5", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
+#con 6
+buttons61 = [{"label": "  Afvis alle  ",  "value": "afvis6", "style": { "color": "black", },},]
+buttons62 = [{"label": "  Accepter alle  ",  "value": "accepter6", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
+#con 7
+buttons71 = [{"label": "  Afvis alle  ",  "value": "afvis7", "style": {"backgroundColor": "lightgreen" "color": "black", },},]
+buttons72 = [{"label": "  Accepter alle  ",  "value": "accepter7", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
+#con 8
+buttons81 = [{"label": "  Afvis alle  ",  "value": "afvis8", "style": { "color": "black", },},]
+buttons82 = [{"label": "  Accepter alle  ",  "value": "accepter8", "style": {"backgroundColor": "lightgreen", "color": "black", },},]
+"""
+buttonsif"""
+xcol1, xcol2, xcol3, xcol4 = st.columns([1,6,6,1])
+
+#con5
+elif st.session_state.condition == 7: 
+    with xcol2:
+        st.markdown('###')
+        button_cliked = st_btn_group(buttons=buttons52, gap_between_buttons = 45, size='compact', align ='center', key="afvis5")
+    with xcol3:
+        st.write(" ")
+    button_cliked = st_btn_group(buttons=buttons51, gap_between_buttons = 45, size='default', align ='center', key="accepter5")
+#con6
+elif st.session_state.condition == 8: 
+    with xcol2:
+        st.markdown('###')
+        button_cliked = st_btn_group(buttons=buttons62, gap_between_buttons = 45, size='compact', align ='center', key="afvis6")
+    with xcol3:
+        st.write(" ")
+    button_cliked = st_btn_group(buttons=buttons61, gap_between_buttons = 45, size='default', align ='center', key="accepter6")
+#con7
+elif st.session_state.condition == 7: 
+    with xcol2:
+        st.markdown('###')
+        button_cliked = st_btn_group(buttons=buttons71, gap_between_buttons = 45, size='compact', align ='center', key="afvis7")
+    with xcol3:
+        st.write(" ")
+    button_cliked = st_btn_group(buttons=buttons72, gap_between_buttons = 45, size='default', align ='center', key="accepter7")
+#con8
+elif st.session_state.condition == 8: 
+    with xcol2:
+        st.markdown('###')
+        button_cliked = st_btn_group(buttons=buttons81, gap_between_buttons = 45, size='compact', align ='center', key="afvis8")
+    with xcol3:
+        st.write(" ")
+    button_cliked = st_btn_group(buttons=buttons82, gap_between_buttons = 45, size='default', align ='center', key="accepter8")
+"""
