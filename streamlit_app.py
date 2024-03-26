@@ -88,7 +88,7 @@ st.markdown(css_body_container,unsafe_allow_html=True)
 #-----------------------------------------  MAKING THE TEXT AND BUTTONS APPEAR  ---------------------------------------------
 #text to apir in banner
 text1 = "Vi og vores samarbejdspartnere bruger teknologier, herunder cookies, til at indsamle oplysninger om dig til forskellige formål, herunder:"
-text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse formål. Du kan også vælge at tilkendegive, hvilke formål du vil give samtykke til ved at klike her. Du kan til enhver tid trække dit samtykke tilbage."
+text2 = "Ved at trykke på 'Accepter alle' giver du samtykke til alle disse formål. Du kan også vælge at tilkendegive, hvilke formål du vil give samtykke til ved at klike <u>her</u> . Du kan til enhver tid trække dit samtykke tilbage."
 
 # defining the colums the buttons and text will appear in
 col1, col2, col3 = st.columns([1,12,1])
