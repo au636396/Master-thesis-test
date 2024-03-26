@@ -100,7 +100,7 @@ with col2:
     st.write("- Funktionalitet")
     st.write("- Statistik")
     st.write("- Marketing")
-    st.write(text2)
+    st.write(text2, unsafe_allow_html=True)
     st.write("---")
 
 # makeing the buttons show up depending on condition
