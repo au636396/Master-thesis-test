@@ -49,8 +49,9 @@ set_background('Background.png')
 
 
 #----------------------------------------------SET UP TIMER---------------------------------------------------------------
+if 'start_time' not in st.session_state:
+    st.session_state['start_time'] = 'time.time()'
 #start_time = time.time()
-start_time = time.perf_counter()
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
@@ -127,9 +128,9 @@ with col2:
     st.markdown('##')
 #------------------------------------------------------ TIMER END -------------------------------------------------------------------
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-    #end_time = time.time()
-    end_time = time.perf_counter()
-    elapsed_time = end_time - start_time
+    end_time = time.time()
+    elapsed_time = end_time - st.session_state.start_time
+    #elapsed_time = end_time - start_time
     st.write(elapsed_time)
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
