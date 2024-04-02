@@ -47,6 +47,18 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('Background.png')
 
+
+#----------------------------------------------SET UP TIMER---------------------------------------------------------------
+start_time = time.time()
+
+# The thing to time. Using sleep as an example
+time.sleep(10)
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+
+st.write(elapsed_time)
+
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
