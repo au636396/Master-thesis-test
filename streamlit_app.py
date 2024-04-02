@@ -137,7 +137,10 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-        new_row = pd.DataFrame(data = [button_cliked, elapsed_time], columns = ['button', 'timer'])   #making the new dataframe
+        columns = ['button', 'timer']
+        data = [(button_cliked), (elapsed_time)]
+        new_row = pd.DataFrame(data, columns=columns)
+        #new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
         newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
         gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
 
