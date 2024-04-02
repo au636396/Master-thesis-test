@@ -51,7 +51,6 @@ set_background('Background.png')
 #----------------------------------------------SET UP TIMER---------------------------------------------------------------
 start_time = time.time()
 
-
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
 olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
@@ -136,11 +135,12 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
     st.write(elapsed_time)
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
+st.dataframe(pdolddata)
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-        columns = ['button', 'timer']
-        data = [(button_cliked), (elapsed_time)]
-        new_row = pd.DataFrame(data, columns=columns, ignore_index=True)
-        #new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
+        #columns = ['button', 'timer']
+        #data = [(button_cliked), (elapsed_time)]
+        #new_row = pd.DataFrame(data, columns=columns)
+        new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
         newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
         gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
 
