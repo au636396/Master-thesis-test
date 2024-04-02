@@ -51,13 +51,6 @@ set_background('Background.png')
 #----------------------------------------------SET UP TIMER---------------------------------------------------------------
 start_time = time.time()
 
-# The thing to time. Using sleep as an example
-time.sleep(10)
-
-end_time = time.time()
-elapsed_time = end_time - start_time
-
-st.write(elapsed_time)
 
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
 gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
@@ -133,6 +126,15 @@ else:
 
 with col2: 
     st.markdown('##')
+
+
+
+#---------------------------------------------- TIMER END -----------------------------------------------------------
+if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+    end_time = time.time()
+
+elapsed_time = end_time - start_time
+st.write(elapsed_time)
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
@@ -142,9 +144,9 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
 
 #----------------- SWITH TO NEW PAGE-------------------------------------
 #Goes to survey page once its has been cliked 
-with col2:
-    if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-          st.switch_page("pages/To_survey.py")
+#with col2:
+ #   if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+#          st.switch_page("pages/To_survey.py")
 
 
 
