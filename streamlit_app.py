@@ -129,8 +129,8 @@ with col2:
 #------------------------------------------------------ TIMER END -------------------------------------------------------------------
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
     end_time = time.time()
-    elapsed_time = end_time - st.session_state.start_time
-    #elapsed_time = end_time - start_time
+    st.session_state.start_time = start_time
+    elapsed_time = end_time - start_time
     st.write(elapsed_time)
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
