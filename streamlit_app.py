@@ -50,7 +50,7 @@ set_background('Background.png')
 
 #----------------------------------------------SET UP TIMER---------------------------------------------------------------
 if 'start_time' not in st.session_state:
-    st.session_state['start_time'] = 'time.time()'
+    st.session_state['start_time'] = time.time()
 #start_time = time.time()
 st.write(st.session_state.start_time)
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
