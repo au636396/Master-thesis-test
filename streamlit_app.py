@@ -139,6 +139,7 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
         #data = [(button_cliked), (elapsed_time)]
         #new_row = pd.DataFrame(data, columns=columns)
         new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
+        new_row['timer'] = elapsed_time
         newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
         gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
 
