@@ -132,7 +132,6 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
     st.write(elapsed_time)
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-st.dataframe(pdolddata)
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
         new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
         new_row['timer'] = elapsed_time   #adding time to the new dataframe
