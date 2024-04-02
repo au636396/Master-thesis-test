@@ -125,42 +125,28 @@ else:
 
 with col2: 
     st.markdown('##')
-#---------------------------------------------------------- TIMER END --------------------------------------------------------------
+#------------------------------------------------------ TIMER END -------------------------------------------------------------------
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
     end_time = time.time()
     elapsed_time = end_time - start_time
     st.write(elapsed_time)
-    st.write(type(elapsed_time))
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
 st.dataframe(pdolddata)
 if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-        #columns = ['button', 'timer']
-        #data = [(button_cliked), (elapsed_time)]
-        #new_row = pd.DataFrame(data, columns=columns)
         new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
-        new_row['timer'] = elapsed_time
+        new_row['timer'] = elapsed_time   #adding time to the new dataframe
         newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
         gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
 
-
-
-#columns = ['Student ID', 'Course ID', 'Marks']
-#data = [(103, 201, 67), (103, 203, 67), (103, 204, 89)]
-#df = pd.DataFrame(data, columns=columns)
-
-
-
-
-#----------------- SWITH TO NEW PAGE-------------------------------------
+#-------------------------------------------------- SWITH TO NEW PAGE-----------------------------------------------------------------
 #Goes to survey page once its has been cliked 
 #with col2:
  #   if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
 #          st.switch_page("pages/To_survey.py")
 
 
-
-#---------------------------------------ADD IF YOU WANT MORE CONDITIONS--------------
+#--------------------------------------------ADD IF YOU WANT MORE CONDITIONS-----------------------------------------------------------
 #con 8
 buttonofdiffsize = """
 #con 5
