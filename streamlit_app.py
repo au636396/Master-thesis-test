@@ -27,7 +27,7 @@ st.markdown(css, unsafe_allow_html=True)
 
 # initializing secction with a random number, used for picking a condition
 if "condition" not in st.session_state:
-    st.session_state["condition"] = random.randint(1,4)
+    st.session_state["condition"] = random.randint(2,4)
 
 # function that add a bacgournd picture 
 def get_base64(bin_file):
