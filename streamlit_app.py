@@ -53,9 +53,10 @@ if 'start_time' not in st.session_state:
     st.session_state['start_time'] = time.time()
 
 #----------------------------------------- SETUP FOR SAVING DATA  --------------------------------------------------------
-gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
-olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
-pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
+#This has been commented out as the study is no longer running 
+#gc = gspread.service_account(filename='~/.config/gspread/service_account.json')   #cornnects to API
+#olddata = gc.open("MasterThesisDataLog").worksheet("ark") # spesifies the sheet
+#pdolddata = gd.get_as_dataframe(olddata)  #imports it as a pd dataframe 
 
 #------------------------- DEFINING THE WAY THE BUTTONS LOOK AND THE OUTPUT TEXT THEY GIVE --------------------------------
 ## SAME SIZE
@@ -132,11 +133,12 @@ if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked ==
     elapsed_time = end_time - st.session_state.start_time 
 #---------------------------------------------- TRACKING THE BUTTON INPUT -----------------------------------------------------------
 ## take the button input and puts it in the new row dataframe, only after a buttons has been pressed
-if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
-    new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
-    new_row['timer'] = elapsed_time   #adding time to the new dataframe
-    newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
-    gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
+#This has been commented out as the study is no longer running 
+#if button_cliked == 'afvis1' or button_cliked == 'accepter1' or button_cliked == 'afvis2' or button_cliked == 'accepter2' or button_cliked == 'afvis3' or button_cliked == 'accepter3' or button_cliked == 'afvis4' or button_cliked == 'accepter4':
+#    new_row = pd.DataFrame([button_cliked], columns = ['button'])   #making the new dataframe
+#    new_row['timer'] = elapsed_time   #adding time to the new dataframe
+#    newdata = pd.concat([pdolddata, new_row]) # adding the new row from above at the end of the data
+#    gd.set_with_dataframe(olddata, newdata)  #this should ad the new data to the gsheet
 
 #-------------------------------------------------- SWITH TO NEW PAGE-----------------------------------------------------------------
 #Goes to survey page once its has been cliked 
