@@ -5,7 +5,9 @@ The exsperiment is not longer running and not corneccted to stremlit anymore. Th
 
 ### condition number meaning:
  1 = Accept button on the left, same colour   
- 2 = Accept button on the left, diffrent colour /n
- 3 = Accept button on the Right, same colour /n
- 4 = Accept button on the Rigth, diffrent colour  /n
+ 2 = Accept button on the left, diffrent colour 
+ 
+ 3 = Accept button on the Right, same colour 
+ 
+ 4 = Accept button on the Rigth, diffrent colour  
 
