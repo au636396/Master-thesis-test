@@ -1,7 +1,7 @@
 # Cognitive master thesis eksperiment
 
-This repo is used to host my eksperiment, made with the Streamlit package. 
-The exsperiment is not longer running and not corneccted to stremlit anymore. The code remains the same. 
+This repo is used to host my master thesis eksperiment, made with the Streamlit package. 
+The exsperiment is not longer running. The code remains the same other than a few comments.
 
 ### condition number meaning:
  1 = Accept button on the left, same colour   
